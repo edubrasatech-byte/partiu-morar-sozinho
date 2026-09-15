@@ -1,6 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
+import { Badge } from '@/components/ui/Badge';
+import { Button } from '@/components/ui/Button';
+import Link from 'next/link';
 
 export function ProductPreview() {
   const [activeTab, setActiveTab] = useState<'ebook' | 'bonus'>('ebook');
@@ -26,36 +29,34 @@ export function ProductPreview() {
   ];
 
   return (
-    <div id="conteudo" className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl">
-      <div className="text-center max-w-3xl mx-auto mb-10">
-        <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 bg-emerald-950/60 border border-emerald-800/60 px-3 py-1 rounded-full">
-          O Que Você Recebe
-        </span>
-        <h2 className="text-3xl font-extrabold text-white mt-3 mb-3">
+    <div id="conteudo" className="bestseller-card p-7 sm:p-12 bg-white">
+      <div className="text-center max-w-3xl mx-auto space-y-3 mb-10">
+        <Badge variant="success">O QUE VOCÊ RECEBE</Badge>
+        <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900">
           O Kit Completo #PartiuMorarSozinho
         </h2>
-        <p className="text-slate-300 text-sm">
+        <p className="text-slate-600 text-sm font-normal">
           Tudo o que você precisa para transformar a vontade de morar sozinho em um plano concreto e à prova de falhas.
         </p>
 
         {/* Tab Switcher */}
-        <div className="flex justify-center gap-3 mt-6 p-1.5 bg-slate-950 rounded-2xl border border-slate-800 max-w-md mx-auto">
+        <div className="flex justify-center gap-3 pt-4">
           <button
             onClick={() => setActiveTab('ebook')}
-            className={`flex-1 py-2.5 px-4 rounded-xl text-xs font-bold transition-all ${
+            className={`px-5 py-2.5 rounded-xl text-xs font-bold transition-all ${
               activeTab === 'ebook'
-                ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/30'
-                : 'text-slate-400 hover:text-white'
+                ? 'bg-navy-900 text-white shadow-md'
+                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
             }`}
           >
             📘 Livro Digital (8 Partes)
           </button>
           <button
             onClick={() => setActiveTab('bonus')}
-            className={`flex-1 py-2.5 px-4 rounded-xl text-xs font-bold transition-all ${
+            className={`px-5 py-2.5 rounded-xl text-xs font-bold transition-all ${
               activeTab === 'bonus'
-                ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/30'
-                : 'text-slate-400 hover:text-white'
+                ? 'bg-navy-900 text-white shadow-md'
+                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
             }`}
           >
             🎁 6 Ferramentas Bônus
@@ -63,33 +64,40 @@ export function ProductPreview() {
         </div>
       </div>
 
-      {/* Ebook Tab Content */}
+      {/* Content */}
       {activeTab === 'ebook' && (
-        <div className="grid md:grid-cols-2 gap-4 animate-in fade-in duration-300">
+        <div className="grid md:grid-cols-2 gap-4">
           {EBOOK_PARTS.map((part, idx) => (
-            <div key={idx} className="p-5 bg-slate-950/60 border border-slate-800 rounded-2xl hover:border-emerald-500/40 transition-all">
-              <span className="text-[11px] font-bold text-emerald-400 uppercase tracking-wider">{part.num}</span>
-              <h3 className="text-base font-bold text-white mt-1 mb-1.5">{part.title}</h3>
-              <p className="text-xs text-slate-300 leading-relaxed">{part.desc}</p>
+            <div key={idx} className="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-emerald-500/40 transition-all">
+              <span className="text-xs font-bold text-emerald-600 uppercase tracking-wider">{part.num}</span>
+              <h3 className="text-base font-bold font-heading text-slate-900 mt-1 mb-1">{part.title}</h3>
+              <p className="text-xs text-slate-600 leading-relaxed font-normal">{part.desc}</p>
             </div>
           ))}
         </div>
       )}
 
-      {/* Bonus Tab Content */}
       {activeTab === 'bonus' && (
-        <div className="grid md:grid-cols-2 gap-4 animate-in fade-in duration-300">
+        <div className="grid md:grid-cols-2 gap-4">
           {BONUS_TOOLS.map((tool, idx) => (
-            <div key={idx} className="p-5 bg-slate-950/60 border border-slate-800 rounded-2xl hover:border-emerald-500/40 transition-all flex items-start gap-4">
-              <div className="text-3xl p-2 bg-slate-900 rounded-xl border border-slate-800">{tool.icon}</div>
+            <div key={idx} className="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-emerald-500/40 transition-all flex items-start gap-4">
+              <div className="text-3xl p-2.5 bg-white rounded-xl shadow-sm border border-slate-200">{tool.icon}</div>
               <div>
-                <h3 className="text-base font-bold text-white mb-1">{tool.title}</h3>
-                <p className="text-xs text-slate-300 leading-relaxed">{tool.desc}</p>
+                <h3 className="text-base font-bold font-heading text-slate-900 mb-1">{tool.title}</h3>
+                <p className="text-xs text-slate-600 leading-relaxed font-normal">{tool.desc}</p>
               </div>
             </div>
           ))}
         </div>
       )}
+
+      <div className="pt-8 text-center border-t border-slate-100 mt-8">
+        <Link href="/ebook">
+          <Button variant="primary" size="lg" className="font-bold">
+            Garantir Meu E-Book + Bônus Agora 🚀
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 }

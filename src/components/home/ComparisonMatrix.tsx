@@ -36,33 +36,33 @@ export function ComparisonMatrix() {
   ];
 
   return (
-    <div className="paper-card p-6 sm:p-10 bg-white space-y-8">
+    <div className="bestseller-card p-7 sm:p-10 space-y-8 bg-white">
       <div className="text-center max-w-2xl mx-auto space-y-3">
         <Badge variant="warning">
           03. Confronto Direto
         </Badge>
-        <h3 className="text-2xl sm:text-4xl font-display-title font-black text-[#0D1117]">
+        <h3 className="text-2xl sm:text-4xl font-extrabold font-heading text-slate-900">
           Sair no Impulso vs. Método PMS
         </h3>
-        <p className="text-slate-700 text-xs sm:text-sm font-medium">
+        <p className="text-slate-600 text-sm font-normal">
           A diferença entre uma mudança que vira pesadelo e uma transição que te dá orgulho.
         </p>
       </div>
 
       <div className="space-y-4">
         {COMPARISONS.map((comp, idx) => (
-          <div key={idx} className="grid md:grid-cols-12 gap-4 p-4 border-2 border-[#0D1117] bg-[#FAF8F5] items-center">
-            <div className="md:col-span-3 font-mono font-bold text-xs text-[#0D1117] uppercase tracking-wider">
+          <div key={idx} className="grid md:grid-cols-12 gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-200 items-center">
+            <div className="md:col-span-3 font-bold text-sm text-slate-900 font-heading">
               {comp.topic}
             </div>
 
-            <div className="md:col-span-4 bg-rose-100 border border-rose-900 p-3 text-xs text-rose-950 font-medium">
-              <span className="font-mono font-bold text-rose-700 block mb-1">❌ SAIR NO IMPULSO</span>
+            <div className="md:col-span-4 bg-rose-50 border border-rose-200 p-4 rounded-xl text-xs text-rose-900 font-medium">
+              <span className="font-bold text-rose-700 block mb-1">❌ SAIR NO IMPULSO</span>
               {comp.impulse}
             </div>
 
-            <div className="md:col-span-5 bg-[#E2FF54] border border-[#0D1117] p-3 text-xs text-[#0D1117] font-medium">
-              <span className="font-mono font-bold text-[#0D1117] block mb-1">✅ MÉTODO PMS</span>
+            <div className="md:col-span-5 bg-emerald-50 border border-emerald-200 p-4 rounded-xl text-xs text-emerald-950 font-medium">
+              <span className="font-bold text-emerald-700 block mb-1">✅ MÉTODO PMS</span>
               {comp.pms}
             </div>
           </div>
