@@ -1,14 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
-import { BestsellerNavbar } from '@/components/layout/BestsellerNavbar';
+import { BoutiqueNavbar } from '@/components/layout/BoutiqueNavbar';
 import { StickyMobileCTA } from '@/components/layout/StickyMobileCTA';
-import { BestsellerHero } from '@/components/home/BestsellerHero';
+import { BoutiqueHero } from '@/components/home/BoutiqueHero';
 import { RealityCheckSection } from '@/components/home/RealityCheckSection';
-import { ComparisonMatrix } from '@/components/home/ComparisonMatrix';
+import { LiveCalculatorWidget } from '@/components/home/LiveCalculatorWidget';
+import { InteractiveTimeline } from '@/components/home/InteractiveTimeline';
 import { ProductPreview } from '@/components/home/ProductPreview';
 import { AuthorSection } from '@/components/home/AuthorSection';
 import { ObjectionsSection } from '@/components/home/ObjectionsSection';
-import { BestsellerOfferCard } from '@/components/home/BestsellerOfferCard';
+import { BoutiqueOfferCard } from '@/components/home/BoutiqueOfferCard';
 import { Container } from '@/components/ui/Container';
 
 export const metadata = {
@@ -18,31 +19,38 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-emerald-500 selection:text-white">
-      {/* Navbar */}
-      <BestsellerNavbar />
+    <div className="min-h-screen bg-[#FBFBF9] text-[#0B0D10] font-sans selection:bg-[#00D66C] selection:text-[#0B0D10]">
+      {/* Boutique Navbar */}
+      <BoutiqueNavbar />
 
-      {/* Hero Section */}
-      <BestsellerHero />
+      {/* Boutique Hero with Interactive Preview Artifact */}
+      <BoutiqueHero />
 
       {/* Reality Check Section */}
-      <section id="tapa-na-cara" className="py-20 bg-slate-50">
+      <section id="manifesto" className="py-20 bg-[#FBFBF9]">
         <Container size="lg">
           <RealityCheckSection />
         </Container>
       </section>
 
-      {/* Offer Card 1 */}
-      <section className="py-12 bg-white border-y border-slate-200">
+      {/* Live Calculator Widget */}
+      <section className="py-12 bg-[#FBFBF9]">
         <Container size="lg">
-          <BestsellerOfferCard />
+          <LiveCalculatorWidget />
         </Container>
       </section>
 
-      {/* Comparison Matrix Section */}
-      <section id="comparativo" className="py-20 bg-slate-50">
+      {/* Interactive Timeline Method */}
+      <section className="py-20 bg-white border-y border-slate-200">
         <Container size="lg">
-          <ComparisonMatrix />
+          <InteractiveTimeline />
+        </Container>
+      </section>
+
+      {/* Offer Ticket 1 */}
+      <section className="py-12 bg-[#FBFBF9]">
+        <Container size="lg">
+          <BoutiqueOfferCard />
         </Container>
       </section>
 
@@ -54,7 +62,7 @@ export default function HomePage() {
       </section>
 
       {/* Author Section */}
-      <section id="autor" className="py-20 bg-slate-50">
+      <section id="autor" className="py-20 bg-[#FBFBF9]">
         <Container size="lg">
           <AuthorSection />
         </Container>
@@ -68,29 +76,29 @@ export default function HomePage() {
       </section>
 
       {/* Final Offer Card */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-24 bg-[#FBFBF9]">
         <Container size="lg">
-          <BestsellerOfferCard />
+          <BoutiqueOfferCard />
         </Container>
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-slate-200 bg-white text-xs text-slate-500 font-medium">
+      <footer className="py-12 border-t border-slate-200 bg-[#0B0D10] text-white text-xs font-medium">
         <Container size="lg" className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-2.5">
-            <div className="w-6 h-6 bg-emerald-500 rounded-lg flex items-center justify-center text-white font-extrabold text-xs">#</div>
-            <span className="font-bold text-slate-900 text-sm font-heading">#PartiuMorarSozinho</span>
+            <div className="w-6 h-6 bg-[#00D66C] text-[#0B0D10] rounded-full flex items-center justify-center font-extrabold text-xs">#</div>
+            <span className="font-bold text-white text-sm font-sans-heading">#PartiuMorarSozinho</span>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6">
-            <Link href="/" className="hover:text-emerald-600">Início</Link>
-            <Link href="/ebook" className="hover:text-emerald-600">E-Book (R$ 47)</Link>
-            <Link href="/diagnostico" className="hover:text-emerald-600">Diagnóstico</Link>
-            <Link href="/blog" className="hover:text-emerald-600">Blog</Link>
-            <Link href="/ferramentas/calculadora-custo" className="hover:text-emerald-600">Simulador</Link>
+          <div className="flex flex-wrap justify-center gap-6 text-slate-300">
+            <Link href="/" className="hover:text-[#00D66C]">Início</Link>
+            <Link href="/ebook" className="hover:text-[#00D66C]">E-Book (R$ 47)</Link>
+            <Link href="/diagnostico" className="hover:text-[#00D66C]">Diagnóstico</Link>
+            <Link href="/blog" className="hover:text-[#00D66C]">Blog</Link>
+            <Link href="/ferramentas/calculadora-custo" className="hover:text-[#00D66C]">Simulador</Link>
           </div>
 
-          <div>
+          <div className="text-slate-400">
             © 2026 #PartiuMorarSozinho. Todos os direitos reservados.
           </div>
         </Container>

@@ -1,26 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@500;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-navy-950: #071322;
-  --color-navy-900: #0B1F3A;
-  --color-navy-800: #143257;
-  --color-navy-700: #1E4676;
+  --color-linen-50: #FBFBF9;
+  --color-linen-100: #F4F3EE;
+  --color-linen-200: #E8E6DD;
+  --color-obsidian-950: #0B0D10;
+  --color-obsidian-900: #12151B;
+  --color-obsidian-800: #1A1E27;
+  --color-jade-500: #00D66C;
+  --color-jade-600: #00B359;
   --color-emerald-500: #10B981;
-  --color-emerald-600: #059669;
-  --color-emerald-700: #047857;
-  --color-mint-50: #ECFDF5;
-  --color-mint-100: #D1FAE5;
-  --color-amber-500: #F59E0B;
-  --color-slate-900: #0F172A;
-  --color-slate-800: #1E293B;
-  --font-display: 'Outfit', sans-serif;
+  --font-serif: 'Instrument Serif', serif;
   --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
 }
 
 :root {
-  --foreground: #0F172A;
-  --background: #FFFFFF;
+  --foreground: #0B0D10;
+  --background: #FBFBF9;
 }
 
 html {
@@ -34,37 +32,50 @@ body {
   overflow-x: hidden;
 }
 
-/* Bestseller Book Premium Glass Cards */
-.bestseller-card {
+/* Custom Boutique Typography */
+.font-serif-title {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+}
+
+.font-sans-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.03em;
+}
+
+/* Boutique Minimalist Hairline Cards */
+.boutique-card {
   background: #ffffff;
-  border: 1px solid #E2E8F0;
-  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.03);
-  border-radius: 1.5rem;
+  border: 1px solid rgba(11, 13, 16, 0.08);
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 20px -2px rgba(11, 13, 16, 0.03);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.bestseller-card:hover {
-  transform: translateY(-3px);
-  border-color: #CBD5E1;
-  box-shadow: 0 20px 35px -10px rgba(15, 23, 42, 0.08), 0 10px 12px -5px rgba(15, 23, 42, 0.04);
+.boutique-card:hover {
+  border-color: rgba(11, 13, 16, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -4px rgba(11, 13, 16, 0.06);
 }
 
-.bestseller-card-dark {
-  background: #0B1F3A;
-  color: #FFFFFF;
+.boutique-card-dark {
+  background: #12151B;
+  color: #FBFBF9;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 40px -15px rgba(7, 19, 34, 0.5);
-  border-radius: 1.5rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.4);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.bestseller-card-dark:hover {
-  transform: translateY(-3px);
-  border-color: rgba(16, 185, 129, 0.4);
-  box-shadow: 0 25px 50px -12px rgba(16, 185, 129, 0.25);
+.boutique-card-dark:hover {
+  border-color: rgba(0, 214, 108, 0.4);
+  box-shadow: 0 20px 40px -10px rgba(0, 214, 108, 0.15);
 }
 
-.font-heading {
-  font-family: 'Outfit', sans-serif;
-  letter-spacing: -0.02em;
+/* Custom Minimalist Line Pattern */
+.bg-boutique-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(11, 13, 16, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(11, 13, 16, 0.03) 1px, transparent 1px);
 }
