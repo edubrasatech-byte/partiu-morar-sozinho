@@ -1,6 +1,7 @@
 import React from 'react';
 import { QuizComponent } from '@/components/quiz/QuizComponent';
-import { EditorialNavbar } from '@/components/layout/EditorialNavbar';
+import { Navbar } from '@/components/layout/Navbar';
+import { Footer } from '@/components/layout/Footer';
 import { Container } from '@/components/ui/Container';
 
 export const metadata = {
@@ -10,26 +11,28 @@ export const metadata = {
 
 export default function DiagnosticoPage() {
   return (
-    <div className="min-h-screen bg-[#FAF8F5] text-[#0D1117] font-sans">
-      <EditorialNavbar />
+    <div className="min-h-screen bg-white text-gray-900 font-sans flex flex-col justify-between">
+      <Navbar />
 
-      <div className="py-16 px-4 bg-paper-grid">
+      <main className="py-16 px-4 bg-gray-50 flex-grow">
         <Container size="md">
           <div className="text-center max-w-2xl mx-auto mb-10 space-y-3">
-            <span className="font-mono text-xs font-bold uppercase tracking-widest bg-[#0D1117] text-[#00E676] px-3.5 py-1.5 border border-[#0D1117] inline-block">
-              [ DIAGNÓSTICO GRATUITO ]
+            <span className="section-tag bg-green-50 text-[#0D7C3E] px-3.5 py-1.5 rounded-full border border-[#0D7C3E]/20 inline-block">
+              DIAGNÓSTICO GRATUITO
             </span>
-            <h1 className="text-3xl sm:text-5xl font-display-title font-black text-[#0D1117] tracking-tight">
+            <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
               Teste de Prontidão do Jovem Adulto
             </h1>
-            <p className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed">
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
               Responda a 5 perguntas objetivas e receba uma análise realista da sua situação e da rota de moradia mais recomendada.
             </p>
           </div>
 
           <QuizComponent />
         </Container>
-      </div>
+      </main>
+
+      <Footer />
     </div>
   );
 }

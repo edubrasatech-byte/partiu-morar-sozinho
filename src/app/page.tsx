@@ -1,103 +1,90 @@
 import React from 'react';
-import Link from 'next/link';
-import { CleanNavbar } from '@/components/layout/CleanNavbar';
+import { Navbar } from '@/components/layout/Navbar';
+import { Footer } from '@/components/layout/Footer';
 import { StickyMobileCTA } from '@/components/layout/StickyMobileCTA';
-import { CleanStorefrontHero } from '@/components/home/CleanStorefrontHero';
-import { RealityCheckSection } from '@/components/home/RealityCheckSection';
-import { LiveCalculatorWidget } from '@/components/home/LiveCalculatorWidget';
-import { ComparisonMatrix } from '@/components/home/ComparisonMatrix';
-import { ProductPreview } from '@/components/home/ProductPreview';
-import { AuthorSection } from '@/components/home/AuthorSection';
-import { ObjectionsSection } from '@/components/home/ObjectionsSection';
-import { BestsellerOfferCard } from '@/components/home/BestsellerOfferCard';
-import { Container } from '@/components/ui/Container';
+import { HeroSection } from '@/components/home/HeroSection';
+import { PainBanner } from '@/components/home/PainBanner';
+import { ProblemSection } from '@/components/home/ProblemSection';
+import { TransitionBanner } from '@/components/home/TransitionBanner';
+import { MethodSection } from '@/components/home/MethodSection';
+import { MethodCTA } from '@/components/home/MethodCTA';
+import { OfferSection } from '@/components/home/OfferSection';
+import { UseCasesSection } from '@/components/home/UseCasesSection';
+import { PricingCard } from '@/components/home/PricingCard';
+import { DiagnosticBanner } from '@/components/home/DiagnosticBanner';
+import { AudienceSection } from '@/components/home/AudienceSection';
+import { GuaranteeBanner } from '@/components/home/GuaranteeBanner';
+import { CredibilitySection } from '@/components/home/CredibilitySection';
+import { FinalCTA } from '@/components/home/FinalCTA';
 
 export const metadata = {
-  title: '#PartiuMorarSozinho — O Plano de Saída Definitivo',
-  description: 'Descubra como organizar seu dinheiro, dominar a rotina doméstica e tomar as decisões certas para conquistar sua privacidade com segurança.',
+  title: '#PartiuMorarSozinho — O Plano de Saída',
+  description:
+    'Organize dinheiro, rotina e decisões com um método passo a passo para sair de casa com segurança — sem improviso e sem voltar por falta de planejamento.',
 };
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-emerald-500 selection:text-white">
-      {/* Clean Navbar */}
-      <CleanNavbar />
+    <div className="min-h-screen bg-white text-gray-900 font-sans">
+      {/* ── Navbar ── */}
+      <Navbar />
 
-      {/* Clean Storefront Hero */}
-      <CleanStorefrontHero />
+      {/* ── 01 HERO ── */}
+      <HeroSection />
 
-      {/* Reality Check Section */}
-      <section id="tapa-na-cara" className="py-20 bg-slate-50">
-        <Container size="lg">
-          <RealityCheckSection />
-        </Container>
+      {/* ── Transição: dor ── */}
+      <PainBanner />
+
+      {/* ── 02 PROBLEMA + DOR ── */}
+      <ProblemSection />
+
+      {/* ── Transição: clareza ── */}
+      <TransitionBanner />
+
+      {/* ── 02 MÉTODO PMS ── */}
+      <section id="metodo">
+        <MethodSection />
       </section>
 
-      {/* Live Calculator Widget */}
-      <section className="py-12 bg-white border-y border-slate-200">
-        <Container size="lg">
-          <LiveCalculatorWidget />
-        </Container>
+      {/* ── CTA Método ── */}
+      <MethodCTA />
+
+      {/* ── 03 OFERTA / CONTEÚDO ── */}
+      <section id="conteudo">
+        <OfferSection />
       </section>
 
-      {/* Comparison Matrix Section */}
-      <section id="comparativo" className="py-20 bg-slate-50">
-        <Container size="lg">
-          <ComparisonMatrix />
-        </Container>
+      {/* ── Casos de uso ── */}
+      <UseCasesSection />
+
+      {/* ── Pricing ── */}
+      <section id="oferta">
+        <PricingCard />
       </section>
 
-      {/* Product & Bonus Preview */}
-      <section id="conteudo" className="py-20 bg-white border-y border-slate-200">
-        <Container size="lg">
-          <ProductPreview />
-        </Container>
+      {/* ── Banner diagnóstico ── */}
+      <DiagnosticBanner />
+
+      {/* ── 04 PARA QUEM É + FAQ ── */}
+      <section id="faq">
+        <AudienceSection />
       </section>
 
-      {/* Author Section */}
-      <section id="autor" className="py-20 bg-slate-50">
-        <Container size="lg">
-          <AuthorSection />
-        </Container>
+      {/* ── Garantia ── */}
+      <GuaranteeBanner />
+
+      {/* ── Credibilidade ── */}
+      <CredibilitySection />
+
+      {/* ── CTA Final ── */}
+      <section id="cta-final">
+        <FinalCTA />
       </section>
 
-      {/* Objections & FAQ Section */}
-      <section id="faq" className="py-20 bg-white border-y border-slate-200">
-        <Container size="lg">
-          <ObjectionsSection />
-        </Container>
-      </section>
+      {/* ── Footer ── */}
+      <Footer />
 
-      {/* Final Offer Card */}
-      <section className="py-24 bg-slate-50">
-        <Container size="lg">
-          <BestsellerOfferCard />
-        </Container>
-      </section>
-
-      {/* Clean Footer */}
-      <footer className="py-12 border-t border-slate-200 bg-white text-xs text-slate-500 font-medium">
-        <Container size="lg" className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-2.5">
-            <div className="w-6 h-6 bg-emerald-600 rounded-lg flex items-center justify-center text-white font-extrabold text-xs">#</div>
-            <span className="font-bold text-slate-900 text-sm font-heading">#PartiuMorarSozinho</span>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-6">
-            <Link href="/" className="hover:text-emerald-600">Início</Link>
-            <Link href="/ebook" className="hover:text-emerald-600">E-Book (R$ 47)</Link>
-            <Link href="/diagnostico" className="hover:text-emerald-600">Diagnóstico</Link>
-            <Link href="/blog" className="hover:text-emerald-600">Blog</Link>
-            <Link href="/ferramentas/calculadora-custo" className="hover:text-emerald-600">Simulador</Link>
-          </div>
-
-          <div>
-            © 2026 #PartiuMorarSozinho. Todos os direitos reservados.
-          </div>
-        </Container>
-      </footer>
-
-      {/* Sticky Mobile CTA */}
+      {/* ── Sticky Mobile CTA ── */}
       <StickyMobileCTA />
     </div>
   );
