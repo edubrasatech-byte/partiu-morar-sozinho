@@ -1,262 +1,309 @@
+import React from 'react';
 import Link from 'next/link';
-import { Button } from '@/components/ui/Button';
+import { Navbar } from '@/components/layout/Navbar';
+import { StickyMobileCTA } from '@/components/layout/StickyMobileCTA';
+import { ComparisonMatrix } from '@/components/home/ComparisonMatrix';
+import { ProductPreview } from '@/components/home/ProductPreview';
+import { AuthorSection } from '@/components/home/AuthorSection';
+import { ObjectionsSection } from '@/components/home/ObjectionsSection';
 import { Container } from '@/components/ui/Container';
 import { Badge } from '@/components/ui/Badge';
+import { Button } from '@/components/ui/Button';
 
-export default function Home() {
+export const metadata = {
+  title: '#PartiuMorarSozinho — Independência Consciente sem Risco de Voltar',
+  description: 'Descubra como organizar dinheiro, rotina e decisões para conquistar sua privacidade com segurança — mesmo que hoje você ache que não ganha o suficiente.',
+};
+
+export default function HomePage() {
   return (
-    <main className="flex flex-col min-h-screen">
+    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-emerald-500 selection:text-white">
+      {/* Top Navbar */}
+      <Navbar />
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-navy-900 to-navy-700 text-white py-24 lg:py-32 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-green-500 via-transparent to-transparent"></div>
-        <Container className="relative z-10 flex flex-col items-center text-center">
-          <Badge variant="success" className="mb-6 bg-green-500/20 text-green-500 border border-green-500/30">Método PMS</Badge>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 max-w-4xl leading-tight">
-            Você não precisa sair de casa no impulso. <span className="text-green-500">Precisa de um plano que não te faça voltar.</span>
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 border-b border-slate-800/80">
+        {/* Decorative Background Accents */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/3 right-10 w-[300px] h-[300px] bg-navy-700/20 blur-[90px] rounded-full pointer-events-none" />
+
+        <Container size="lg" className="relative z-10 text-center">
+          <Badge variant="success" className="mb-6 px-4 py-1.5 text-xs tracking-wider uppercase shadow-lg shadow-emerald-500/10">
+            ✨ Edição Atualizada 2026 • Método de Independência Consciente
+          </Badge>
+
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-[1.15] mb-6">
+            Você não precisa sair de casa no impulso.{' '}
+            <span className="bg-gradient-to-r from-emerald-400 via-emerald-300 to-teal-200 bg-clip-text text-transparent">
+              Precisa de um plano que não te faça voltar.
+            </span>
           </h1>
-          <p className="text-lg md:text-xl text-surface-100/80 mb-10 max-w-3xl leading-relaxed">
+
+          <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed mb-10 font-normal">
             Descubra como organizar dinheiro, rotina e decisões para conquistar sua privacidade com segurança — mesmo que hoje você ache que não ganha o suficiente ou não saiba por onde começar.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <Link href="/diagnostico" className="w-full sm:w-auto">
-              <Button size="lg" className="w-full sm:w-auto text-lg shadow-lg shadow-green-500/20">Fazer o diagnóstico</Button>
-            </Link>
-            <Link href="/ebook" className="w-full sm:w-auto">
-              <Button size="lg" variant="secondary" className="w-full sm:w-auto text-lg bg-white/5 border-white/20 text-white hover:bg-white hover:text-navy-900 hover:border-white">
-                Conhecer o e-book
+
+          {/* Primary & Secondary CTAs */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+            <Link href="/diagnostico">
+              <Button variant="primary" size="lg" className="w-full sm:w-auto bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-extrabold px-8 py-4 text-base shadow-xl shadow-emerald-500/25 rounded-xl transition-all scale-100 hover:scale-105">
+                Fazer o Diagnóstico de Prontidão Grátis 🚀
               </Button>
             </Link>
+            <a href="#conteudo">
+              <Button variant="secondary" size="lg" className="w-full sm:w-auto text-slate-200 border-slate-700 hover:bg-slate-800/80 px-8 py-4 text-base rounded-xl">
+                Conhecer o E-book & Bônus
+              </Button>
+            </a>
           </div>
+
+          <p className="text-xs text-slate-400">
+            🔒 Acesso digital imediato. Garantia incondicional e entrega segura.
+          </p>
         </Container>
       </section>
 
-      {/* Pain Identification Section */}
-      <section className="py-20 lg:py-28 bg-surface-100">
-        <Container>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-navy-900 mb-4 animate-fade-in-up">Você se identifica com essas situações?</h2>
+      {/* Pain Mirroring Section */}
+      <section className="py-20 bg-slate-900/60 border-b border-slate-800">
+        <Container size="lg">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-xs font-bold uppercase tracking-wider text-rose-400 bg-rose-950/60 border border-rose-900/60 px-3 py-1 rounded-full">
+              Identificação Real
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-4">
+              Você se reconhece em alguma destas situações?
+            </h2>
+            <p className="text-slate-300 text-base">
+              A vontade de morar sozinho raramente é um capricho. Ela nasce da necessidade de viver a própria vida.
+            </p>
           </div>
+
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'Falta de privacidade',
-                desc: 'Regras, horários, intromissão e a sensação de que você não tem espaço próprio para viver.',
-                icon: '🏠',
-                delay: ''
-              },
-              {
-                title: 'Medo financeiro',
-                desc: 'Querer sair, mas não saber quanto custa, se dá para pagar e o que acontece se der errado.',
-                icon: '💸',
-                delay: 'delay-100'
-              },
-              {
-                title: 'Sem plano definido',
-                desc: 'Saber que precisa mudar, mas não ter um caminho claro do diagnóstico até as chaves.',
-                icon: '🗺️',
-                delay: 'delay-200'
-              }
-            ].map((pain, i) => (
-              <div key={i} className={`bg-white p-8 rounded-2xl shadow-sm border border-border-200 hover:shadow-md transition-shadow animate-fade-in-up ${pain.delay}`}>
-                <div className="text-4xl mb-6 bg-mint-100 w-16 h-16 flex items-center justify-center rounded-xl">{pain.icon}</div>
-                <h3 className="text-xl font-bold text-navy-900 mb-3">{pain.title}</h3>
-                <p className="text-text-600 leading-relaxed">{pain.desc}</p>
-              </div>
-            ))}
+            <div className="bg-slate-900 p-8 rounded-3xl border border-slate-800 hover:border-slate-700 transition-all shadow-xl">
+              <div className="text-4xl mb-4 p-3 bg-rose-950/40 rounded-2xl w-fit border border-rose-900/40">🚪</div>
+              <h3 className="text-xl font-bold text-white mb-2">Falta de Privacidade</h3>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                Regras de terceiros, horários impostos, intromissões na rotina e a constante sensação de que seu quarto é o único espaço que te pertence.
+              </p>
+            </div>
+
+            <div className="bg-slate-900 p-8 rounded-3xl border border-slate-800 hover:border-slate-700 transition-all shadow-xl">
+              <div className="text-4xl mb-4 p-3 bg-amber-950/40 rounded-2xl w-fit border border-amber-900/40">💸</div>
+              <h3 className="text-xl font-bold text-white mb-2">Medo do Custo Oculto</h3>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                Querer muito sair, mas travar ao não saber exatamente quanto custa manter um apartamento, quais as taxas iniciais e o que acontece se o dinheiro faltar.
+              </p>
+            </div>
+
+            <div className="bg-slate-900 p-8 rounded-3xl border border-slate-800 hover:border-slate-700 transition-all shadow-xl">
+              <div className="text-4xl mb-4 p-3 bg-emerald-950/40 rounded-2xl w-fit border border-emerald-900/40">🧭</div>
+              <h3 className="text-xl font-bold text-white mb-2">Falta de um Plano Claro</h3>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                Saber que a mudança é inevitável, mas viver no ciclo de "um dia eu me mudo", sem metas numéricas, prazos ou passos de preparação.
+              </p>
+            </div>
           </div>
         </Container>
       </section>
 
-      {/* Method PMS Section */}
-      <section className="py-20 lg:py-28 bg-white relative">
-        <Container>
-          <div className="text-center mb-16 max-w-3xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-bold text-navy-900 mb-4">Plano PMS de Independência Consciente</h2>
-            <p className="text-lg text-text-600">Seis etapas que transformam vontade em um plano seguro.</p>
+      {/* Comparison Matrix Section */}
+      <section id="comparativo" className="py-20">
+        <Container size="lg">
+          <ComparisonMatrix />
+        </Container>
+      </section>
+
+      {/* Method PMS Section (6 Steps) */}
+      <section id="metodo" className="py-20 bg-slate-900/80 border-y border-slate-800">
+        <Container size="lg">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <Badge variant="success" className="mb-3">Mecanismo Único</Badge>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+              O Método PMS em 6 Etapas
+            </h2>
+            <p className="text-slate-300 text-base">
+              Cada etapa do método foi desenhada para neutralizar um risco específico de falha e garantir sua permanência definitiva.
+            </p>
           </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { step: 1, title: 'Diagnosticar', q: 'Por que quero sair e estou realmente pronto?', a: 'Teste de prontidão e mapa de motivos' },
-              { step: 2, title: 'Organizar', q: 'Quanto custa a minha vida fora de casa?', a: 'Orçamento real e custo de instalação' },
-              { step: 3, title: 'Proteger', q: 'O que impede uma volta forçada?', a: 'Reserva, margem e plano de risco' },
-              { step: 4, title: 'Preparar', q: 'Sei cuidar da rotina e de mim?', a: 'Competências domésticas, emocionais e administrativas' },
-              { step: 5, title: 'Escolher', q: 'Alugar, dividir, comprar ou esperar com meta?', a: 'Matriz de decisão de moradia' },
-              { step: 6, title: 'Transicionar', q: 'Como sair sem romper relações nem improvisar?', a: 'Conversa, cronograma e primeiros 90 dias' },
-            ].map((item) => (
-              <div key={item.step} className="p-6 rounded-2xl border border-border-200 hover:border-green-500/50 transition-colors bg-surface-100/50 group">
-                <div className="text-green-500 font-black text-5xl opacity-20 mb-2 group-hover:opacity-40 transition-opacity">0{item.step}</div>
-                <h3 className="text-xl font-bold text-navy-900 mb-2">{item.title}</h3>
-                <p className="text-text-900 font-medium mb-3">"{item.q}"</p>
-                <div className="flex items-start gap-2 text-text-600 text-sm">
-                  <div className="text-green-500 mt-0.5">✓</div>
-                  <p>{item.a}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Housing Routes Section */}
-      <section className="py-20 lg:py-28 bg-navy-900 text-white">
-        <Container>
-          <div className="text-center mb-16 max-w-3xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Diferentes caminhos, um só objetivo: sua independência</h2>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { title: 'Alugar', desc: 'Mais flexibilidade e rapidez. Ideal para testar a vida solo e ter seu espaço mais rápido.' },
-              { title: 'Dividir moradia', desc: 'Menor custo mensal. Ideal para quem prioriza localização ou precisa poupar enquanto mora fora.' },
-              { title: 'Comprar', desc: 'Construção de patrimônio. Ideal para quem tem entrada garantida e estabilidade geográfica.' },
-              { title: 'Permanecer com meta', desc: 'Preparo estratégico. Ideal para quem identificou que a matemática ainda não fecha e vai focar em aumentar a renda primeiro.' },
-            ].map((route, i) => (
-              <div key={i} className="bg-navy-700 p-6 rounded-2xl border border-navy-700 hover:border-green-500/50 transition-colors">
-                <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-green-500 block"></span>
-                  {route.title}
-                </h3>
-                <p className="text-surface-100/80 text-sm leading-relaxed">{route.desc}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* E-book Preview Section */}
-      <section className="py-20 lg:py-28 bg-white overflow-hidden relative">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-mint-100/50 rounded-full blur-3xl -z-10 pointer-events-none"></div>
-        <Container>
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-            <div className="w-full lg:w-1/2 lg:order-2">
-              <div className="bg-surface-100 rounded-3xl p-8 aspect-square flex items-center justify-center border border-border-200 relative shadow-2xl shadow-navy-900/5">
-                <div className="absolute top-4 right-4">
-                  <Badge variant="warning" className="uppercase tracking-wide font-bold">Em breve</Badge>
-                </div>
-                <div className="text-center">
-                  <div className="w-48 h-64 bg-navy-900 rounded-lg mx-auto shadow-xl flex items-center justify-center mb-6 relative overflow-hidden">
-                    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-navy-700 to-navy-900 z-0"></div>
-                    <div className="absolute top-0 right-0 w-16 h-full bg-white/5 z-0 transform skew-x-12"></div>
-                    <div className="relative z-10 text-white font-bold text-xl px-4 text-left w-full">
-                      #Partiu<br/><span className="text-green-500">MorarSozinho</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="w-full lg:w-1/2 lg:order-1">
-              <h2 className="text-3xl lg:text-4xl font-bold text-navy-900 mb-4">#PartiuMorarSozinho — O Plano de Saída</h2>
-              <p className="text-lg text-text-600 mb-8 leading-relaxed">
-                O guia prático para conquistar independência, organizar o dinheiro e morar sozinho com segurança.
-              </p>
-              <div className="mb-10">
-                <h4 className="font-bold text-navy-900 mb-4 uppercase tracking-wider text-sm">O que você vai receber:</h4>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-3">
-                    <div className="bg-mint-100 p-1 rounded text-green-700 mt-0.5">✓</div>
-                    <span className="font-medium text-text-900">O e-book completo</span>
-                  </li>
-                  {[
-                    'Planilha de Orçamento PMS',
-                    'Checklist de Enxoval e Instalação',
-                    'Matriz de Decisão de Moradia',
-                    'Roteiro da Conversa com os Pais',
-                    'Plano de Ação para os Primeiros 90 Dias',
-                    'Lista Antifraude para Contratos'
-                  ].map((bonus, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <div className="bg-surface-100 p-1 rounded text-green-500 mt-0.5">+</div>
-                      <span className="text-text-600">Bônus: {bonus}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <Link href="/ebook">
-                <Button size="lg" className="w-full sm:w-auto shadow-lg shadow-green-500/20">Quero montar meu plano de saída</Button>
-              </Link>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 lg:py-28 bg-surface-100">
-        <Container className="max-w-4xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-navy-900 mb-4">Perguntas frequentes</h2>
-          </div>
-          <div className="space-y-4">
-            {[
               {
-                q: 'Preciso ganhar muito para morar sozinho?',
-                a: 'Não. O que você precisa é descobrir o seu custo real de vida. O método te ajuda a calcular esse custo e adaptar as suas expectativas para que caibam no seu bolso, sem mágica, mas com planejamento.'
+                step: '01',
+                title: 'Diagnosticar',
+                desc: 'Avaliação da prontidão financeira, emocional, prática e familiar. Descubra se sua motivação é maturidade ou apenas impulso temporário.',
+                risk: 'Evita: Sair sem estar pronto e passar sufoco no 1º mês.'
               },
               {
-                q: 'O método serve para quem quer alugar?',
-                a: 'Sim! E também para quem quer dividir apartamento, comprar ou até mesmo continuar morando com a família por um tempo estratégico para juntar recursos.'
+                step: '02',
+                title: 'Organizar',
+                desc: 'Engenharia do Orçamento Real. Separação rigorosa entre Custo Fixo Mensal e Custo de Instalação (mobília, caução e taxas).',
+                risk: 'Evita: Estouro de cartão e dívidas inesperadas.'
               },
               {
-                q: 'E se eu não estiver pronto agora?',
-                a: 'Descobrir isso antes de sair é o melhor cenário possível. Se o diagnóstico mostrar que não é a hora, o método te dá o caminho para se preparar financeiramente e emocionalmente nos próximos meses.'
+                step: '03',
+                title: 'Proteger',
+                desc: 'Construção da Reserva de Emergência de 3 a 6 meses de custo de vida e cálculo da margem de segurança contra imprevistos.',
+                risk: 'Evita: A temida volta forçada com as malas na mão.'
               },
               {
-                q: 'Meus pais vão ficar chateados?',
-                a: 'É normal que exista resistência, mas a transição não precisa ser uma ruptura. O plano inclui estratégias para ter a conversa de forma madura, transformando uma possível briga em um projeto apoiado.'
+                step: '04',
+                title: 'Preparar',
+                desc: 'Desenvolvimento das competências da vida prática: rotina doméstica, compras de supermercado inteligentes, limpeza e gestão de contas.',
+                risk: 'Evita: Caos doméstico e gastos excessivos com delivery.'
               },
               {
-                q: 'O conteúdo é atualizado?',
-                a: 'Sim. Os custos, dicas de negociação e checklists refletem o mercado atual e são revisados periodicamente para manter a utilidade.'
+                step: '05',
+                title: 'Escolher',
+                desc: 'Seleção técnica da modalidade de moradia: Alugar sozinho, Dividir apartamento, Comprar ou Permanecer com Meta definida.',
+                risk: 'Evita: Assinar contratos abusivos ou imóveis incompatíveis.'
+              },
+              {
+                step: '06',
+                title: 'Transicionar',
+                desc: 'Roteiro de comunicação com a família sem gerar conflitos, cronograma tático de mudança e plano de gestão dos primeiros 90 dias.',
+                risk: 'Evita: Conflito familiar e desorganização na mudança.'
               }
-            ].map((faq, i) => (
-              <details key={i} className="group bg-white rounded-xl border border-border-200 overflow-hidden cursor-pointer transition-shadow hover:shadow-sm">
-                <summary className="font-bold text-navy-900 text-lg p-6 flex justify-between items-center list-none outline-none">
-                  {faq.q}
-                  <span className="text-green-500 group-open:rotate-45 transition-transform duration-300 text-2xl leading-none">+</span>
-                </summary>
-                <div className="p-6 pt-0 text-text-600 leading-relaxed">
-                  {faq.a}
+            ].map((item, idx) => (
+              <div key={idx} className="bg-slate-950 p-6 rounded-2xl border border-slate-800 relative flex flex-col justify-between hover:border-emerald-500/50 transition-all">
+                <div>
+                  <span className="text-3xl font-extrabold text-emerald-500/30 block mb-2">{item.step}</span>
+                  <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                  <p className="text-slate-300 text-xs leading-relaxed mb-4">{item.desc}</p>
                 </div>
-              </details>
+                <div className="pt-3 border-t border-slate-900 text-[11px] font-semibold text-emerald-400">
+                  {item.risk}
+                </div>
+              </div>
             ))}
           </div>
         </Container>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-24 bg-gradient-to-tr from-green-700 to-green-500 text-white text-center">
-        <Container>
-          <h2 className="text-3xl lg:text-5xl font-bold mb-8 max-w-3xl mx-auto leading-tight">
-            Sua independência começa com um plano.
-          </h2>
-          <Link href="/diagnostico">
-            <Button size="lg" variant="secondary" className="bg-navy-900 border-navy-900 text-white hover:bg-navy-900/90 hover:border-navy-900 shadow-xl shadow-navy-900/20 text-lg">
-              Fazer o diagnóstico gratuito
-            </Button>
-          </Link>
+      {/* Housing Routes Matrix */}
+      <section className="py-20">
+        <Container size="lg">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 bg-emerald-950/60 border border-emerald-800/60 px-3 py-1 rounded-full">
+              Caminhos Possíveis
+            </span>
+            <h2 className="text-3xl font-extrabold text-white mt-3 mb-4">
+              4 Rotas Validadas de Moradia
+            </h2>
+            <p className="text-slate-300 text-sm">
+              Não existe uma resposta única. O método te ajuda a escolher a rota certa para o seu momento financeiro.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-slate-900 p-6 rounded-2xl border border-slate-800 text-center">
+              <div className="text-3xl mb-3">🔑</div>
+              <h3 className="text-lg font-bold text-white mb-2">Alugar Sozinho</h3>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Ideal para quem busca privacidade total e possui orçamento com margem de segurança de 30% a 35%.
+              </p>
+            </div>
+
+            <div className="bg-slate-900 p-6 rounded-2xl border border-slate-800 text-center">
+              <div className="text-3xl mb-3">🤝</div>
+              <h3 className="text-lg font-bold text-white mb-2">Dividir Moradia</h3>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Perfeito para acelerar a saída de casa reduzindo o custo de instalação e as despesas fixas pela metade.
+              </p>
+            </div>
+
+            <div className="bg-slate-900 p-6 rounded-2xl border border-slate-800 text-center">
+              <div className="text-3xl mb-3">🏦</div>
+              <h3 className="text-lg font-bold text-white mb-2">Comprar Imóvel</h3>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Indicado para quem tem estabilidade de renda longa e reserva para entrada e documentação imobiliária.
+              </p>
+            </div>
+
+            <div className="bg-slate-900 p-6 rounded-2xl border border-slate-800 text-center">
+              <div className="text-3xl mb-3">🎯</div>
+              <h3 className="text-lg font-bold text-white mb-2">Permanecer com Meta</h3>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Continuar na casa dos pais por mais 3 a 6 meses com um plano focado em acumular a reserva de emergência.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Interactive Product & Bonus Preview */}
+      <section className="py-20 bg-slate-900/60 border-y border-slate-800">
+        <Container size="lg">
+          <ProductPreview />
+        </Container>
+      </section>
+
+      {/* Author Section */}
+      <section className="py-20">
+        <Container size="lg">
+          <AuthorSection />
+        </Container>
+      </section>
+
+      {/* Objections & FAQ Section */}
+      <section id="faq" className="py-20 bg-slate-900/60 border-y border-slate-800">
+        <Container size="lg">
+          <ObjectionsSection />
+        </Container>
+      </section>
+
+      {/* Final Offer / Guarantee Section */}
+      <section className="py-24 relative overflow-hidden">
+        <Container size="md" className="text-center">
+          <div className="bg-gradient-to-b from-slate-900 to-slate-950 p-10 sm:p-14 rounded-3xl border border-emerald-500/40 shadow-2xl relative">
+            <Badge variant="warning" className="mb-4">Oferta de Pré-Lançamento</Badge>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+              Sua independência começa com um plano.
+            </h2>
+            <p className="text-slate-300 text-base max-w-xl mx-auto mb-8">
+              Faça o Diagnóstico de Prontidão Gratuito agora mesmo e receba as orientações da sua rota de moradia ideal.
+            </p>
+
+            <Link href="/diagnostico">
+              <Button variant="primary" size="lg" className="w-full sm:w-auto bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-extrabold px-10 py-5 text-lg shadow-xl shadow-emerald-500/30 rounded-xl">
+                Começar o Diagnóstico Grátis 🚀
+              </Button>
+            </Link>
+
+            <div className="mt-8 flex flex-wrap justify-center items-center gap-6 text-xs text-slate-400 pt-6 border-t border-slate-800">
+              <span>✓ Teste 100% Gratuito</span>
+              <span>✓ Análise Instantânea em 5 Minutos</span>
+              <span>✓ Conteúdo Atualizado 2026</span>
+            </div>
+          </div>
         </Container>
       </section>
 
       {/* Footer */}
-      <footer className="bg-navy-900 py-12 text-surface-100 border-t border-white/10">
-        <Container>
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
-            <div className="font-bold text-xl text-white">#Partiu<span className="text-green-500">MorarSozinho</span></div>
-            <nav className="flex flex-wrap justify-center gap-6 text-sm font-medium">
-              {['Início', 'E-book', 'Diagnóstico', 'Método', 'Blog', 'Sobre', 'Contato'].map(link => (
-                <Link key={link} href="#" className="hover:text-white transition-colors">{link}</Link>
-              ))}
-            </nav>
+      <footer className="py-12 border-t border-slate-800 text-xs text-slate-400">
+        <Container size="lg" className="flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex items-center gap-2">
+            <div className="w-6 h-6 rounded-lg bg-emerald-500 flex items-center justify-center text-white font-bold text-xs">#</div>
+            <span className="font-bold text-white text-sm">#PartiuMorarSozinho</span>
           </div>
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-white/10 text-sm text-surface-100/60">
-            <div>&copy; 2026 #PartiuMorarSozinho. Todos os direitos reservados.</div>
-            <div className="flex items-center gap-4">
-              <Link href="#" className="hover:text-white transition-colors">Privacidade</Link>
-              <Link href="#" className="hover:text-white transition-colors">Termos</Link>
-              <Link href="#" className="hover:text-white transition-colors">Política Editorial</Link>
-              <Badge variant="info" className="ml-2 bg-white/10 text-white border-0">Modo: Pré-lançamento</Badge>
-            </div>
+
+          <div className="flex flex-wrap justify-center gap-6">
+            <Link href="/" className="hover:text-emerald-400">Início</Link>
+            <Link href="/diagnostico" className="hover:text-emerald-400">Diagnóstico</Link>
+            <Link href="/ebook" className="hover:text-emerald-400">E-book</Link>
+            <Link href="/blog" className="hover:text-emerald-400">Blog</Link>
+            <Link href="/ferramentas/calculadora-custo" className="hover:text-emerald-400">Simulador de Custos</Link>
+            <Link href="/ferramentas/checklist-vistoria" className="hover:text-emerald-400">Checklist Vistoria</Link>
+          </div>
+
+          <div>
+            © 2026 #PartiuMorarSozinho. Todos os direitos reservados.
           </div>
         </Container>
       </footer>
-    </main>
+
+      {/* Sticky Mobile CTA */}
+      <StickyMobileCTA />
+    </div>
   );
 }
