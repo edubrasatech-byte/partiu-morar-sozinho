@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Navbar } from '@/components/layout/Navbar';
 import { StickyMobileCTA } from '@/components/layout/StickyMobileCTA';
+import { UniqueHero } from '@/components/home/UniqueHero';
 import { RealityCheckSection } from '@/components/home/RealityCheckSection';
 import { ComparisonMatrix } from '@/components/home/ComparisonMatrix';
 import { ProductPreview } from '@/components/home/ProductPreview';
@@ -9,8 +10,6 @@ import { AuthorSection } from '@/components/home/AuthorSection';
 import { ObjectionsSection } from '@/components/home/ObjectionsSection';
 import { EbookOfferCard } from '@/components/home/EbookOfferCard';
 import { Container } from '@/components/ui/Container';
-import { Badge } from '@/components/ui/Badge';
-import { Button } from '@/components/ui/Button';
 
 export const metadata = {
   title: '#PartiuMorarSozinho — O Plano de Saída Definitivo',
@@ -19,59 +18,22 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-emerald-500 selection:text-white">
+    <div className="min-h-screen bg-navy-950 text-slate-100 font-sans selection:bg-emerald-500 selection:text-white">
       {/* Top Navbar */}
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 border-b border-slate-800/80">
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none" />
-
-        <Container size="lg" className="relative z-10 text-center">
-          <Badge variant="success" className="mb-6 px-4 py-1.5 text-xs font-extrabold tracking-wider uppercase">
-            ⚡ O Manual Definitivo de Emancipação do Jovem Adulto
-          </Badge>
-
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-white max-w-4xl mx-auto leading-[1.12] mb-6">
-            Chega de pedir autorização para viver.{' '}
-            <span className="bg-gradient-to-r from-emerald-400 via-emerald-300 to-teal-200 bg-clip-text text-transparent">
-              Você precisa de um plano de saída, não de desculpas.
-            </span>
-          </h1>
-
-          <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed mb-10 font-normal">
-            O choque de realidade e o método prático que você precisa para organizar o dinheiro, vencer a acomodação e conquistar sua privacidade definitiva sem coragem de mentira.
-          </p>
-
-          {/* Primary & Secondary CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-            <Link href="/ebook">
-              <Button variant="primary" size="lg" className="w-full sm:w-auto bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-extrabold px-9 py-4 text-base shadow-xl shadow-emerald-500/25 rounded-xl transition-all scale-100 hover:scale-105">
-                Quero o E-Book + Kit de Saída 🚀
-              </Button>
-            </Link>
-            <Link href="/diagnostico">
-              <Button variant="secondary" size="lg" className="w-full sm:w-auto text-slate-200 border-slate-700 hover:bg-slate-800/80 px-8 py-4 text-base rounded-xl">
-                Fazer o Teste de Prontidão Grátis
-              </Button>
-            </Link>
-          </div>
-
-          <p className="text-xs text-slate-400">
-            🔒 Acesso digital imediato em PDF + 6 Ferramentas Práticas em Planilhas e Checklists.
-          </p>
-        </Container>
-      </section>
+      {/* Editorial Unique Hero */}
+      <UniqueHero />
 
       {/* Reality Check Section (O Tapa na Cara) */}
-      <section className="py-20 bg-slate-950">
+      <section className="py-20 bg-navy-950">
         <Container size="lg">
           <RealityCheckSection />
         </Container>
       </section>
 
       {/* Direct Offer Card 1 */}
-      <section className="py-16 bg-slate-900/50 border-y border-slate-800">
+      <section className="py-16 bg-slate-900/40 border-y border-slate-800/80">
         <Container size="lg">
           <EbookOfferCard />
         </Container>
@@ -85,11 +47,13 @@ export default function HomePage() {
       </section>
 
       {/* Method PMS Section (6 Steps) */}
-      <section id="metodo" className="py-20 bg-slate-900/80 border-y border-slate-800">
+      <section id="metodo" className="py-20 bg-slate-900/60 border-y border-slate-800/80">
         <Container size="lg">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <Badge variant="success" className="mb-3">Plano Passo a Passo</Badge>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+            <span className="text-xs font-mono-tag font-bold uppercase tracking-widest text-emerald-400 bg-emerald-950 px-3.5 py-1.5 rounded-full border border-emerald-800/60">
+              Mecanismo de Emancipação
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-black font-heading text-white mt-4 mb-4">
               O Método PMS em 6 Etapas
             </h2>
             <p className="text-slate-300 text-base">
@@ -115,7 +79,7 @@ export default function HomePage() {
                 step: '03',
                 title: 'Proteger',
                 desc: 'Construção da Reserva de Emergência de 3 a 6 meses de custo de vida e cálculo da margem de segurança contra imprevistos.',
-                risk: 'Evita: A temida volta forcida com as malas na mão.'
+                risk: 'Evita: A temida volta forçada com as malas na mão.'
               },
               {
                 step: '04',
@@ -136,13 +100,13 @@ export default function HomePage() {
                 risk: 'Evita: Conflito familiar e desorganização na mudança.'
               }
             ].map((item, idx) => (
-              <div key={idx} className="bg-slate-950 p-6 rounded-2xl border border-slate-800 flex flex-col justify-between hover:border-emerald-500/50 transition-all">
+              <div key={idx} className="editorial-card p-6 rounded-2xl flex flex-col justify-between">
                 <div>
-                  <span className="text-3xl font-extrabold text-emerald-500/30 block mb-2">{item.step}</span>
-                  <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                  <span className="text-3xl font-mono-tag font-black text-emerald-500/40 block mb-2">{item.step}</span>
+                  <h3 className="text-xl font-bold font-heading text-white mb-2">{item.title}</h3>
                   <p className="text-slate-300 text-xs leading-relaxed mb-4">{item.desc}</p>
                 </div>
-                <div className="pt-3 border-t border-slate-900 text-[11px] font-semibold text-emerald-400">
+                <div className="pt-3 border-t border-slate-800 text-[11px] font-mono-tag font-semibold text-emerald-400">
                   {item.risk}
                 </div>
               </div>
@@ -152,7 +116,7 @@ export default function HomePage() {
       </section>
 
       {/* Product & Bonus Preview */}
-      <section className="py-20 bg-slate-900/60 border-y border-slate-800">
+      <section className="py-20 bg-navy-950">
         <Container size="lg">
           <ProductPreview />
         </Container>
@@ -166,21 +130,21 @@ export default function HomePage() {
       </section>
 
       {/* Objections & FAQ Section */}
-      <section id="faq" className="py-20 bg-slate-900/60 border-y border-slate-800">
+      <section id="faq" className="py-20 bg-slate-900/40 border-y border-slate-800/80">
         <Container size="lg">
           <ObjectionsSection />
         </Container>
       </section>
 
       {/* Final Offer / Checkout Card */}
-      <section className="py-24 bg-slate-950">
+      <section className="py-24 bg-navy-950">
         <Container size="lg">
           <EbookOfferCard />
         </Container>
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-slate-800 text-xs text-slate-400">
+      <footer className="py-12 border-t border-slate-800 text-xs text-slate-400 bg-navy-950">
         <Container size="lg" className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 rounded-lg bg-emerald-500 flex items-center justify-center text-white font-bold text-xs">#</div>
