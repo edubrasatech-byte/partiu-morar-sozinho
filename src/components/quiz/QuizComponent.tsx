@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Button } from '../ui/Button';
+import { Badge } from '../ui/Badge';
 
 interface Question {
   id: number;
@@ -131,45 +132,46 @@ export function QuizComponent() {
   if (completed) {
     const result = getProfileResult();
     return (
-      <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 max-w-2xl mx-auto">
-        <div className="text-center mb-6">
-          <div className="inline-block p-4 rounded-full bg-emerald-50 text-emerald-600 font-bold text-3xl mb-3">
-            {scorePercent}%
+      <div className="paper-card p-8 bg-white border-2 border-[#0D1117] max-w-2xl mx-auto space-y-6">
+        <div className="text-center space-y-3">
+          <Badge variant="success">SEU RESULTADO DO DIAGNÓSTICO</Badge>
+          <div className="text-4xl font-display-title font-black text-[#0D1117] py-2">
+            {scorePercent}% DE PRONTIDÃO
           </div>
-          <h2 className="text-2xl font-bold text-gray-900">{result.title}</h2>
-          <p className="text-gray-600 mt-2">{result.desc}</p>
+          <h2 className="text-xl font-display-title font-bold text-[#0D1117]">{result.title}</h2>
+          <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">{result.desc}</p>
         </div>
 
-        <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-xl mb-6 text-emerald-900 text-sm font-medium text-center">
+        <div className="p-4 bg-[#E2FF54] border-2 border-[#0D1117] text-[#0D1117] font-mono font-bold text-xs text-center">
           {result.recommendation}
         </div>
 
-        <form onSubmit={handleSubmitLead} className="space-y-4 pt-4 border-t border-gray-100">
-          <h3 className="font-semibold text-gray-900 text-center">Receba o relatório completo e o checklist de transição no seu e-mail</h3>
+        <form onSubmit={handleSubmitLead} className="space-y-4 pt-4 border-t-2 border-[#0D1117]">
+          <h3 className="font-display-title font-bold text-[#0D1117] text-center">Receba o relatório completo + Plano de Saída no seu e-mail</h3>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Seu Nome</label>
+            <label className="block text-xs font-mono font-bold text-[#0D1117] mb-1">SEU NOME</label>
             <input
               type="text"
               required
               value={leadName}
               onChange={(e) => setLeadName(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:outline-none"
+              className="w-full px-4 py-2.5 bg-[#FAF8F5] border-2 border-[#0D1117] text-[#0D1117] font-medium text-sm focus:outline-none"
               placeholder="Digite seu nome"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Seu E-mail</label>
+            <label className="block text-xs font-mono font-bold text-[#0D1117] mb-1">SEU E-MAIL</label>
             <input
               type="email"
               required
               value={leadEmail}
               onChange={(e) => setLeadEmail(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:outline-none"
+              className="w-full px-4 py-2.5 bg-[#FAF8F5] border-2 border-[#0D1117] text-[#0D1117] font-medium text-sm focus:outline-none"
               placeholder="seuemail@exemplo.com"
             />
           </div>
-          <Button type="submit" disabled={submitting} className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 rounded-lg">
-            {submitting ? 'Enviando...' : 'Quero meu Relatório + Plano Grátis'}
+          <Button type="submit" disabled={submitting} variant="primary" className="w-full py-3">
+            {submitting ? 'ENVIANDO...' : 'RECEBER MEU PLANO GRÁTIS 🚀'}
           </Button>
         </form>
       </div>
@@ -179,24 +181,24 @@ export function QuizComponent() {
   const q = QUESTIONS[currentStep];
 
   return (
-    <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 max-w-2xl mx-auto">
-      <div className="flex justify-between items-center mb-6">
-        <span className="text-xs font-semibold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">
-          Etapa {currentStep + 1} de {QUESTIONS.length}
-        </span>
-        <span className="text-sm font-medium text-gray-400">
-          {Math.round(((currentStep + 1) / QUESTIONS.length) * 100)}% concluído
+    <div className="paper-card p-8 bg-white border-2 border-[#0D1117] max-w-2xl mx-auto space-y-6">
+      <div className="flex justify-between items-center border-b-2 border-[#0D1117] pb-3 font-mono text-xs font-bold">
+        <Badge variant="warning">
+          ETAPA {currentStep + 1} DE {QUESTIONS.length}
+        </Badge>
+        <span className="text-slate-600">
+          {Math.round(((currentStep + 1) / QUESTIONS.length) * 100)}% CONCLUÍDO
         </span>
       </div>
 
-      <h2 className="text-xl font-bold text-gray-900 mb-6">{q.question}</h2>
+      <h2 className="text-xl font-display-title font-bold text-[#0D1117]">{q.question}</h2>
 
       <div className="space-y-3">
         {q.options.map((opt, idx) => (
           <button
             key={idx}
             onClick={() => handleSelectOption(opt.points)}
-            className="w-full text-left p-4 rounded-xl border border-gray-200 hover:border-emerald-500 hover:bg-emerald-50/50 transition-all font-medium text-gray-800 focus:outline-none"
+            className="w-full text-left p-4 bg-[#FAF8F5] border-2 border-[#0D1117] hover:bg-[#E2FF54] transition-all font-medium text-xs sm:text-sm text-[#0D1117] focus:outline-none font-sans font-semibold"
           >
             {opt.label}
           </button>

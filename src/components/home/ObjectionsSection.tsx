@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { Badge } from '@/components/ui/Badge';
 
 export function ObjectionsSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -37,15 +38,15 @@ export function ObjectionsSection() {
   ];
 
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl">
-      <div className="text-center max-w-2xl mx-auto mb-10">
-        <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 bg-emerald-950/60 border border-emerald-800/60 px-3 py-1 rounded-full">
-          Respostas Transparentes
-        </span>
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-white mt-3 mb-2">
-          Principais Dúvidas & Objeções
+    <div className="paper-card p-6 sm:p-10 bg-white space-y-8">
+      <div className="text-center max-w-2xl mx-auto space-y-3">
+        <Badge variant="default">
+          05. Perguntas Frequentes
+        </Badge>
+        <h2 className="text-2xl sm:text-4xl font-display-title font-black text-[#0D1117]">
+          Dúvidas & Objeções
         </h2>
-        <p className="text-slate-300 text-sm">
+        <p className="text-slate-700 text-xs sm:text-sm font-medium">
           Tudo o que você precisa saber antes de iniciar seu planejamento.
         </p>
       </div>
@@ -54,16 +55,16 @@ export function ObjectionsSection() {
         {OBJECTIONS.map((obj, idx) => {
           const isOpen = openIndex === idx;
           return (
-            <div key={idx} className="border border-slate-800 bg-slate-950/60 rounded-2xl overflow-hidden transition-all">
+            <div key={idx} className="border-2 border-[#0D1117] bg-[#FAF8F5] overflow-hidden transition-all">
               <button
                 onClick={() => setOpenIndex(isOpen ? null : idx)}
-                className="w-full p-5 text-left font-bold text-white text-sm sm:text-base flex justify-between items-center hover:text-emerald-400 transition-colors focus:outline-none"
+                className="w-full p-4 text-left font-display-title font-bold text-[#0D1117] text-sm sm:text-base flex justify-between items-center hover:bg-[#E2FF54] transition-colors focus:outline-none"
               >
                 <span>{obj.q}</span>
-                <span className="text-emerald-400 font-extrabold text-lg ml-4">{isOpen ? '−' : '+'}</span>
+                <span className="font-mono font-black text-lg ml-4">{isOpen ? '−' : '+'}</span>
               </button>
               {isOpen && (
-                <div className="p-5 pt-0 text-xs sm:text-sm text-slate-300 border-t border-slate-800/60 leading-relaxed bg-slate-900/40">
+                <div className="p-4 pt-2 text-xs sm:text-sm text-slate-800 border-t-2 border-[#0D1117] leading-relaxed bg-white font-medium">
                   {obj.a}
                 </div>
               )}

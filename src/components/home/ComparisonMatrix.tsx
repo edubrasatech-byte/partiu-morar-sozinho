@@ -1,4 +1,5 @@
 import React from 'react';
+import { Badge } from '@/components/ui/Badge';
 
 export function ComparisonMatrix() {
   const COMPARISONS = [
@@ -35,33 +36,33 @@ export function ComparisonMatrix() {
   ];
 
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl overflow-hidden">
-      <div className="text-center max-w-2xl mx-auto mb-10">
-        <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-950/60 border border-amber-800/60 px-3 py-1 rounded-full">
-          Diferença Fundamental
-        </span>
-        <h3 className="text-2xl sm:text-3xl font-extrabold text-white mt-3 mb-2">
+    <div className="paper-card p-6 sm:p-10 bg-white space-y-8">
+      <div className="text-center max-w-2xl mx-auto space-y-3">
+        <Badge variant="warning">
+          03. Confronto Direto
+        </Badge>
+        <h3 className="text-2xl sm:text-4xl font-display-title font-black text-[#0D1117]">
           Sair no Impulso vs. Método PMS
         </h3>
-        <p className="text-slate-300 text-sm">
+        <p className="text-slate-700 text-xs sm:text-sm font-medium">
           A diferença entre uma mudança que vira pesadelo e uma transição que te dá orgulho.
         </p>
       </div>
 
       <div className="space-y-4">
         {COMPARISONS.map((comp, idx) => (
-          <div key={idx} className="grid md:grid-cols-12 gap-4 p-5 rounded-2xl bg-slate-950/60 border border-slate-800/80 items-center">
-            <div className="md:col-span-3 text-sm font-bold text-slate-200 border-b md:border-b-0 md:border-r border-slate-800 pb-2 md:pb-0">
+          <div key={idx} className="grid md:grid-cols-12 gap-4 p-4 border-2 border-[#0D1117] bg-[#FAF8F5] items-center">
+            <div className="md:col-span-3 font-mono font-bold text-xs text-[#0D1117] uppercase tracking-wider">
               {comp.topic}
             </div>
 
-            <div className="md:col-span-4 bg-rose-950/30 border border-rose-900/40 p-3.5 rounded-xl text-xs text-rose-200">
-              <span className="font-bold text-rose-400 block mb-1">❌ Sair no Impulso</span>
+            <div className="md:col-span-4 bg-rose-100 border border-rose-900 p-3 text-xs text-rose-950 font-medium">
+              <span className="font-mono font-bold text-rose-700 block mb-1">❌ SAIR NO IMPULSO</span>
               {comp.impulse}
             </div>
 
-            <div className="md:col-span-5 bg-emerald-950/40 border border-emerald-800/50 p-3.5 rounded-xl text-xs text-emerald-200">
-              <span className="font-bold text-emerald-400 block mb-1">✅ Método PMS</span>
+            <div className="md:col-span-5 bg-[#E2FF54] border border-[#0D1117] p-3 text-xs text-[#0D1117] font-medium">
+              <span className="font-mono font-bold text-[#0D1117] block mb-1">✅ MÉTODO PMS</span>
               {comp.pms}
             </div>
           </div>

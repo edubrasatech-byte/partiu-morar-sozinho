@@ -1,25 +1,25 @@
 import React from 'react';
 
-export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
+export interface BadgeProps {
   variant?: 'default' | 'success' | 'warning' | 'danger' | 'info';
+  children: React.ReactNode;
+  className?: string;
 }
 
-export const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(
-  ({ className = '', variant = 'default', ...props }, ref) => {
-    const baseStyles = 'inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium';
-    
-    const variants = {
-      default: 'bg-surface-100 text-text-600',
-      success: 'bg-mint-100 text-green-700',
-      warning: 'bg-amber-500/20 text-amber-500',
-      danger: 'bg-danger-600/10 text-danger-600',
-      info: 'bg-navy-900/10 text-navy-900'
-    };
+export function Badge({ variant = 'default', children, className = '' }: BadgeProps) {
+  const baseStyles = "font-mono font-bold text-[10px] uppercase tracking-wider px-3 py-1 border border-[#0D1117] shadow-[2px_2px_0px_0px_#0D1117] inline-block";
 
-    return (
-      <span ref={ref} className={`${baseStyles} ${variants[variant]} ${className}`} {...props} />
-    );
-  }
-);
+  const variants = {
+    default: "bg-white text-[#0D1117]",
+    success: "bg-[#00E676] text-[#0D1117]",
+    warning: "bg-[#E2FF54] text-[#0D1117]",
+    danger: "bg-rose-500 text-white",
+    info: "bg-[#0D1117] text-[#00E676]",
+  };
 
-Badge.displayName = 'Badge';
+  return (
+    <span className={`${baseStyles} ${variants[variant]} ${className}`}>
+      {children}
+    </span>
+  );
+}
