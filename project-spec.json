@@ -1,0 +1,348 @@
+{
+  "schema_version": "1.0.0",
+  "generated_on": "2026-09-01",
+  "project": {
+    "name": "#PartiuMorarSozinho",
+    "working_product_name": "#PartiuMorarSozinho — O Plano de Saída",
+    "language": "pt-BR",
+    "initial_market": "Brasil",
+    "primary_goal": "Vender o e-book atualizado com um kit de ferramentas práticas",
+    "category": "Educação prática para independência consciente",
+    "status": "prelaunch"
+  },
+  "source_control": {
+    "provider": "GitHub",
+    "visibility": "private",
+    "source_of_truth": true,
+    "default_branch": "main",
+    "protected_default_branch": true,
+    "required_ci": [
+      "lint",
+      "format-check",
+      "typecheck",
+      "unit-tests",
+      "integration-tests",
+      "production-build",
+      "secret-scan"
+    ],
+    "forbidden_in_git": [
+      "secrets",
+      "real environment files",
+      "database dumps with personal data",
+      "raw Google Drive archive",
+      "unapproved large videos and PDFs",
+      "lead and payment exports"
+    ]
+  },
+  "hosting": {
+    "provider": "Railway",
+    "deploy_source": "GitHub",
+    "environments": [
+      "development",
+      "staging",
+      "production"
+    ],
+    "initial_deploy_environment": "staging",
+    "production_requires_manual_approval": true,
+    "services": [
+      {
+        "name": "web",
+        "purpose": "Public website, APIs and admin panel"
+      },
+      {
+        "name": "postgres",
+        "purpose": "Persistent relational data"
+      },
+      {
+        "name": "worker",
+        "purpose": "Editorial, email, webhook and maintenance jobs"
+      },
+      {
+        "name": "scheduler",
+        "purpose": "Enqueue scheduled jobs"
+      }
+    ],
+    "health_path": "/api/health",
+    "business_timezone": "America/Sao_Paulo",
+    "storage_timezone": "UTC"
+  },
+  "positioning": {
+    "promise": "Um plano claro para sair da casa dos pais com segurança, conquistar privacidade e assumir o controle da própria vida — sem agir no impulso, afundar-se em dívida ou precisar voltar derrotado.",
+    "campaign_concept": "Você não precisa sair no impulso. Precisa de um plano que não te faça voltar.",
+    "suggested_tagline": "Privacidade é prioridade.",
+    "housing_routes": [
+      "alugar",
+      "dividir moradia",
+      "comprar",
+      "permanecer temporariamente com meta"
+    ],
+    "property_purchase_is_only_route": false
+  },
+  "brand": {
+    "primary_colors": {
+      "navy_900": "#0B1F3A",
+      "navy_700": "#163A5F",
+      "green_500": "#28C76F",
+      "green_700": "#16864A",
+      "mint_100": "#EAF9F0",
+      "surface_100": "#F3F6F8",
+      "border_200": "#D9E2E8",
+      "text_900": "#17212B",
+      "text_600": "#60707D",
+      "amber_500": "#F3B61F",
+      "danger_600": "#B42318"
+    },
+    "voice": [
+      "direta",
+      "prática",
+      "humana",
+      "adulta",
+      "acolhedora",
+      "realista"
+    ],
+    "forbidden_tone": [
+      "humilhação",
+      "anti-família",
+      "promessa milagrosa",
+      "urgência falsa",
+      "luxo inacessível",
+      "motivação vazia"
+    ]
+  },
+  "audience_segments": [
+    {
+      "id": "sufocado",
+      "need": "privacidade e espaço",
+      "entry_message": "Recupere espaço e controle sem sair no impulso."
+    },
+    {
+      "id": "inseguro",
+      "need": "segurança financeira",
+      "entry_message": "Descubra o custo real e monte um plano possível."
+    },
+    {
+      "id": "perdido",
+      "need": "sequência e escolha",
+      "entry_message": "Siga uma rota clara do diagnóstico às chaves."
+    },
+    {
+      "id": "quase_pronto",
+      "need": "decisão e cronograma",
+      "entry_message": "Transforme intenção em cronograma e decisão."
+    }
+  ],
+  "method": [
+    {
+      "order": 1,
+      "id": "diagnosticar",
+      "deliverable": "Teste de prontidão e mapa de motivos"
+    },
+    {
+      "order": 2,
+      "id": "organizar",
+      "deliverable": "Orçamento real e custo de instalação"
+    },
+    {
+      "order": 3,
+      "id": "proteger",
+      "deliverable": "Reserva, margem e plano de risco"
+    },
+    {
+      "order": 4,
+      "id": "preparar",
+      "deliverable": "Competências domésticas, emocionais e administrativas"
+    },
+    {
+      "order": 5,
+      "id": "escolher",
+      "deliverable": "Matriz de decisão de moradia"
+    },
+    {
+      "order": 6,
+      "id": "transicionar",
+      "deliverable": "Conversa, cronograma e primeiros 90 dias"
+    }
+  ],
+  "roles": [
+    "visitor",
+    "lead",
+    "buyer",
+    "author_editor",
+    "reviewer",
+    "administrator"
+  ],
+  "public_routes": [
+    "/",
+    "/ebook",
+    "/comece-aqui",
+    "/diagnostico",
+    "/diagnostico/resultado",
+    "/metodo",
+    "/blog",
+    "/blog/[slug]",
+    "/ferramentas",
+    "/sobre",
+    "/depoimentos",
+    "/contato",
+    "/obrigado",
+    "/acesso",
+    "/privacidade",
+    "/termos",
+    "/cookies",
+    "/politica-editorial"
+  ],
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "priority": "P0",
+      "name": "Sales-oriented public website",
+      "acceptance": "All required routes render responsively with real actions and no placeholder claims."
+    },
+    {
+      "id": "REQ-002",
+      "priority": "P0",
+      "name": "Readiness quiz",
+      "acceptance": "Versioned four-dimension quiz segments a consented lead and returns an actionable result."
+    },
+    {
+      "id": "REQ-003",
+      "priority": "P0",
+      "name": "Configurable offer",
+      "acceptance": "Price, guarantee, assets, checkout and availability are editable without code; sales remain disabled when required data is missing."
+    },
+    {
+      "id": "REQ-004",
+      "priority": "P0",
+      "name": "Administrative CMS",
+      "acceptance": "Authorized users can create, review, schedule, publish, update and roll back content with audit history."
+    },
+    {
+      "id": "REQ-005",
+      "priority": "P0",
+      "name": "Sensitive-content gate",
+      "acceptance": "Financial, legal and real-estate content cannot publish without current primary sources and identified human approval."
+    },
+    {
+      "id": "REQ-006",
+      "priority": "P0",
+      "name": "Railway staging",
+      "acceptance": "GitHub CI success deploys a healthy staging environment with web and PostgreSQL."
+    },
+    {
+      "id": "REQ-007",
+      "priority": "P1",
+      "name": "Editorial automation",
+      "acceptance": "Scheduler, idempotent queue and worker process approved content and expose failures without publishing blocked content."
+    },
+    {
+      "id": "REQ-008",
+      "priority": "P1",
+      "name": "Email automation",
+      "acceptance": "Segmented transactional and consented marketing sequences work in sandbox with unsubscribe and version history."
+    },
+    {
+      "id": "REQ-009",
+      "priority": "P1",
+      "name": "Checkout and entitlements",
+      "acceptance": "Signed idempotent sandbox webhooks create one purchase and entitlement; refunds follow configured policy."
+    },
+    {
+      "id": "REQ-010",
+      "priority": "P1",
+      "name": "SEO system",
+      "acceptance": "Canonical, sitemap, RSS, redirects, metadata, structured data and internal linking validate on published content."
+    },
+    {
+      "id": "REQ-011",
+      "priority": "P1",
+      "name": "Analytics and experiments",
+      "acceptance": "Versioned events cover the funnel without duplication and experiments store hypothesis, variant and outcome."
+    },
+    {
+      "id": "REQ-012",
+      "priority": "P0",
+      "name": "LGPD controls",
+      "acceptance": "Consent, unsubscribe, export, deletion and retention flows are implemented and tested."
+    },
+    {
+      "id": "REQ-013",
+      "priority": "P0",
+      "name": "Accessibility and performance",
+      "acceptance": "Critical flows meet WCAG 2.2 AA checks and documented performance budgets."
+    },
+    {
+      "id": "REQ-014",
+      "priority": "P0",
+      "name": "Production safety",
+      "acceptance": "Production sales, indexing and autopublish cannot activate without explicit flags, required configuration and audit."
+    }
+  ],
+  "content": {
+    "editorial_states": [
+      "idea",
+      "briefing",
+      "research",
+      "draft",
+      "review",
+      "approved",
+      "scheduled",
+      "published",
+      "updating",
+      "archived",
+      "rejected",
+      "blocked"
+    ],
+    "risk_types": [
+      "common",
+      "financial",
+      "legal",
+      "real_estate",
+      "emotionally_sensitive"
+    ],
+    "initial_auto_publish_enabled": false,
+    "sensitive_content_human_review": true,
+    "forbidden_claims": [
+      "sucesso garantido",
+      "unverified customer counts",
+      "false scarcity",
+      "universal financial outcomes",
+      "unverified credentials",
+      "fabricated testimonials"
+    ]
+  },
+  "defaults": {
+    "site_mode": "prelaunch",
+    "sales_enabled": false,
+    "auto_publish_enabled": false,
+    "testimonials_enabled": false,
+    "author_credentials_enabled": false,
+    "email_marketing_enabled": false,
+    "checkout_provider": "disabled",
+    "analytics_enabled": false
+  },
+  "quality_gates": {
+    "accessibility_target": "WCAG 2.2 AA",
+    "core_web_vitals": {
+      "lcp_ms_p75_max": 2500,
+      "inp_ms_p75_max": 200,
+      "cls_p75_max": 0.1
+    },
+    "required_before_phase_complete": [
+      "lint",
+      "typecheck",
+      "relevant tests",
+      "production build",
+      "mobile and desktop review",
+      "security review",
+      "documentation update"
+    ]
+  },
+  "raw_asset_source": {
+    "provider": "Google Drive",
+    "url": "https://drive.google.com/drive/folders/1-koKCdS4IISLBlqolhq9L0JnGZN15CI4",
+    "observed_file_count": 151,
+    "must_not_be_committed_as_raw_archive": true,
+    "must_preserve_originals": true
+  }
+}
+
