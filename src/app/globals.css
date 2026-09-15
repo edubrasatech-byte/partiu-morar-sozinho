@@ -1,24 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-linen-50: #FBFBF9;
-  --color-linen-100: #F4F3EE;
-  --color-linen-200: #E8E6DD;
-  --color-obsidian-950: #0B0D10;
-  --color-obsidian-900: #12151B;
-  --color-obsidian-800: #1A1E27;
-  --color-jade-500: #00D66C;
-  --color-jade-600: #00B359;
-  --color-emerald-500: #10B981;
-  --font-serif: 'Instrument Serif', serif;
+  --font-serif-display: 'Italiana', serif;
   --font-sans: 'Plus Jakarta Sans', sans-serif;
-  --font-mono: 'Space Grotesk', monospace;
+  --font-mono-code: 'Space Mono', monospace;
 }
 
 :root {
-  --foreground: #0B0D10;
-  --background: #FBFBF9;
+  --foreground: #111111;
+  --background: #F7F5F0;
 }
 
 html {
@@ -32,50 +23,41 @@ body {
   overflow-x: hidden;
 }
 
-/* Custom Boutique Typography */
-.font-serif-title {
-  font-family: 'Instrument Serif', serif;
-  font-style: italic;
+/* Magazine High-Fashion Layout Utilities */
+.font-italiana {
+  font-family: 'Italiana', serif;
 }
 
-.font-sans-heading {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  letter-spacing: -0.03em;
+.font-mono-code {
+  font-family: 'Space Mono', monospace;
 }
 
-/* Boutique Minimalist Hairline Cards */
-.boutique-card {
-  background: #ffffff;
-  border: 1px solid rgba(11, 13, 16, 0.08);
-  border-radius: 1.25rem;
-  box-shadow: 0 4px 20px -2px rgba(11, 13, 16, 0.03);
+/* Custom Magazine Card & Spreads */
+.magazine-spread {
+  background-color: #FFFFFF;
+  border: 1px solid #111111;
+  box-shadow: 8px 8px 0px 0px #111111;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.boutique-card:hover {
-  border-color: rgba(11, 13, 16, 0.2);
-  transform: translateY(-2px);
-  box-shadow: 0 12px 30px -4px rgba(11, 13, 16, 0.06);
-}
-
-.boutique-card-dark {
-  background: #12151B;
-  color: #FBFBF9;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1.25rem;
-  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.4);
+.magazine-spread-dark {
+  background-color: #111111;
+  color: #F7F5F0;
+  border: 1px solid #111111;
+  box-shadow: 8px 8px 0px 0px #00E676;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.boutique-card-dark:hover {
-  border-color: rgba(0, 214, 108, 0.4);
-  box-shadow: 0 20px 40px -10px rgba(0, 214, 108, 0.15);
+.magazine-pill {
+  border: 1.5px solid #111111;
+  box-shadow: 2px 2px 0px 0px #111111;
 }
 
-/* Custom Minimalist Line Pattern */
-.bg-boutique-grid {
-  background-size: 40px 40px;
-  background-image: 
-    linear-gradient(to right, rgba(11, 13, 16, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(11, 13, 16, 0.03) 1px, transparent 1px);
+/* Custom Horizontal Scrollbar for Spreads */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
