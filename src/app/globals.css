@@ -1,29 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&family=Space+Grotesk:wght@500;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-navy-950: #060e1a;
+  --color-paper-50: #FAF8F5;
+  --color-paper-100: #F3EFE6;
+  --color-paper-200: #E6DFD3;
+  --color-ink-950: #0D1117;
+  --color-ink-900: #121824;
   --color-navy-900: #0B1F3A;
-  --color-navy-800: #102a4e;
-  --color-navy-700: #163A5F;
-  --color-green-500: #28C76F;
-  --color-green-600: #1fb05f;
-  --color-green-700: #16864A;
-  --color-mint-100: #EAF9F0;
-  --color-mint-900: #082916;
-  --color-surface-100: #F3F6F8;
-  --color-border-200: #D9E2E8;
-  --color-text-900: #17212B;
-  --color-text-600: #60707D;
-  --color-amber-500: #F3B61F;
-  --color-danger-600: #B42318;
-  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --color-emerald-500: #00E676;
+  --color-emerald-600: #00C853;
+  --color-highlighter: #E2FF54;
+  --font-display: 'Syne', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
   --font-mono: 'Space Grotesk', monospace;
 }
 
 :root {
-  --foreground: #f1f5f9;
-  --background: #060e1a;
+  --foreground: #121824;
+  --background: #FAF8F5;
 }
 
 html {
@@ -37,47 +32,49 @@ body {
   overflow-x: hidden;
 }
 
-/* Custom Grid Texture Background */
-.bg-grid-pattern {
-  background-size: 24px 24px;
-  background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+/* Brutalist / Tactile Paper Shadows & Cards */
+.paper-card {
+  background-color: #ffffff;
+  border: 2px solid #0D1117;
+  box-shadow: 5px 5px 0px 0px #0D1117;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.bg-dot-pattern {
-  background-size: 16px 16px;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+.paper-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px 0px #0D1117;
 }
 
-/* Editorial Tactile Card */
-.editorial-card {
-  background: rgba(11, 31, 58, 0.65);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+.paper-card-dark {
+  background-color: #0D1117;
+  color: #FAF8F5;
+  border: 2px solid #0D1117;
+  box-shadow: 5px 5px 0px 0px #00E676;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.editorial-card:hover {
-  border-color: rgba(40, 199, 111, 0.4);
-  transform: translateY(-2px);
-  box-shadow: 0 20px 40px -15px rgba(40, 199, 111, 0.15);
+.paper-card-dark:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px 0px #00E676;
 }
 
-/* Custom Typography Accents */
-.font-heading {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  letter-spacing: -0.03em;
-}
-
-.font-mono-tag {
+.paper-badge {
   font-family: 'Space Grotesk', monospace;
-  letter-spacing: -0.01em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1.5px solid #0D1117;
+  box-shadow: 2px 2px 0px 0px #0D1117;
 }
 
-/* Custom Glow & Borders */
-.border-emerald-glow {
-  border-color: rgba(40, 199, 111, 0.3);
-  box-shadow: 0 0 20px rgba(40, 199, 111, 0.15);
+.bg-paper-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(13, 17, 23, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(13, 17, 23, 0.05) 1px, transparent 1px);
+}
+
+.font-display-title {
+  font-family: 'Syne', sans-serif;
+  letter-spacing: -0.04em;
 }
