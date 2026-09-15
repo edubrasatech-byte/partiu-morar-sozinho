@@ -1,11 +1,104 @@
 import React from 'react';
-import { InteractiveMagazineExperience } from '@/components/home/InteractiveMagazineExperience';
+import Link from 'next/link';
+import { CleanNavbar } from '@/components/layout/CleanNavbar';
+import { StickyMobileCTA } from '@/components/layout/StickyMobileCTA';
+import { CleanStorefrontHero } from '@/components/home/CleanStorefrontHero';
+import { RealityCheckSection } from '@/components/home/RealityCheckSection';
+import { LiveCalculatorWidget } from '@/components/home/LiveCalculatorWidget';
+import { ComparisonMatrix } from '@/components/home/ComparisonMatrix';
+import { ProductPreview } from '@/components/home/ProductPreview';
+import { AuthorSection } from '@/components/home/AuthorSection';
+import { ObjectionsSection } from '@/components/home/ObjectionsSection';
+import { BestsellerOfferCard } from '@/components/home/BestsellerOfferCard';
+import { Container } from '@/components/ui/Container';
 
 export const metadata = {
-  title: '#PartiuMorarSozinho — Revista Interativa de Emancipação 2026',
-  description: 'Chega de pedir autorização para viver sua própria vida. Adquira o E-Book + Kit de Ferramentas e conquiste sua independência sem risco de voltar.',
+  title: '#PartiuMorarSozinho — O Plano de Saída Definitivo',
+  description: 'Descubra como organizar seu dinheiro, dominar a rotina doméstica e tomar as decisões certas para conquistar sua privacidade com segurança.',
 };
 
 export default function HomePage() {
-  return <InteractiveMagazineExperience />;
+  return (
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-emerald-500 selection:text-white">
+      {/* Clean Navbar */}
+      <CleanNavbar />
+
+      {/* Clean Storefront Hero */}
+      <CleanStorefrontHero />
+
+      {/* Reality Check Section */}
+      <section id="tapa-na-cara" className="py-20 bg-slate-50">
+        <Container size="lg">
+          <RealityCheckSection />
+        </Container>
+      </section>
+
+      {/* Live Calculator Widget */}
+      <section className="py-12 bg-white border-y border-slate-200">
+        <Container size="lg">
+          <LiveCalculatorWidget />
+        </Container>
+      </section>
+
+      {/* Comparison Matrix Section */}
+      <section id="comparativo" className="py-20 bg-slate-50">
+        <Container size="lg">
+          <ComparisonMatrix />
+        </Container>
+      </section>
+
+      {/* Product & Bonus Preview */}
+      <section id="conteudo" className="py-20 bg-white border-y border-slate-200">
+        <Container size="lg">
+          <ProductPreview />
+        </Container>
+      </section>
+
+      {/* Author Section */}
+      <section id="autor" className="py-20 bg-slate-50">
+        <Container size="lg">
+          <AuthorSection />
+        </Container>
+      </section>
+
+      {/* Objections & FAQ Section */}
+      <section id="faq" className="py-20 bg-white border-y border-slate-200">
+        <Container size="lg">
+          <ObjectionsSection />
+        </Container>
+      </section>
+
+      {/* Final Offer Card */}
+      <section className="py-24 bg-slate-50">
+        <Container size="lg">
+          <BestsellerOfferCard />
+        </Container>
+      </section>
+
+      {/* Clean Footer */}
+      <footer className="py-12 border-t border-slate-200 bg-white text-xs text-slate-500 font-medium">
+        <Container size="lg" className="flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex items-center gap-2.5">
+            <div className="w-6 h-6 bg-emerald-600 rounded-lg flex items-center justify-center text-white font-extrabold text-xs">#</div>
+            <span className="font-bold text-slate-900 text-sm font-heading">#PartiuMorarSozinho</span>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-6">
+            <Link href="/" className="hover:text-emerald-600">Início</Link>
+            <Link href="/ebook" className="hover:text-emerald-600">E-Book (R$ 47)</Link>
+            <Link href="/diagnostico" className="hover:text-emerald-600">Diagnóstico</Link>
+            <Link href="/blog" className="hover:text-emerald-600">Blog</Link>
+            <Link href="/ferramentas/calculadora-custo" className="hover:text-emerald-600">Simulador</Link>
+          </div>
+
+          <div>
+            © 2026 #PartiuMorarSozinho. Todos os direitos reservados.
+          </div>
+        </Container>
+      </footer>
+
+      {/* Sticky Mobile CTA */}
+      <StickyMobileCTA />
+    </div>
+  );
 }

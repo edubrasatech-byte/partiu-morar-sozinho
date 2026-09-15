@@ -1,15 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Inter:ital,wght@0,300..800;1,300..800&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-serif-display: 'Italiana', serif;
-  --font-sans: 'Plus Jakarta Sans', sans-serif;
-  --font-mono-code: 'Space Mono', monospace;
+  --color-slate-50: #F8FAFC;
+  --color-slate-100: #F1F5F9;
+  --color-slate-200: #E2E8F0;
+  --color-slate-300: #CBD5E1;
+  --color-slate-600: #475569;
+  --color-slate-800: #1E293B;
+  --color-slate-900: #0F172A;
+  --color-slate-950: #020617;
+  --color-emerald-500: #10B981;
+  --color-emerald-600: #059669;
+  --color-emerald-700: #047857;
+  --color-mint-50: #ECFDF5;
+  --color-mint-100: #D1FAE5;
+  --font-sans: 'Plus Jakarta Sans', 'Inter', sans-serif;
 }
 
 :root {
-  --foreground: #111111;
-  --background: #F7F5F0;
+  --foreground: #0F172A;
+  --background: #FFFFFF;
 }
 
 html {
@@ -23,41 +34,30 @@ body {
   overflow-x: hidden;
 }
 
-/* Magazine High-Fashion Layout Utilities */
-.font-italiana {
-  font-family: 'Italiana', serif;
+/* Premium Clean Card Utilities */
+.clean-card {
+  background: #ffffff;
+  border: 1px solid #E2E8F0;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease-in-out;
 }
 
-.font-mono-code {
-  font-family: 'Space Mono', monospace;
+.clean-card:hover {
+  border-color: #CBD5E1;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+  transform: translateY(-2px);
 }
 
-/* Custom Magazine Card & Spreads */
-.magazine-spread {
-  background-color: #FFFFFF;
-  border: 1px solid #111111;
-  box-shadow: 8px 8px 0px 0px #111111;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+.clean-card-dark {
+  background: #0F172A;
+  color: #ffffff;
+  border: 1px solid #1E293B;
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.3);
 }
 
-.magazine-spread-dark {
-  background-color: #111111;
-  color: #F7F5F0;
-  border: 1px solid #111111;
-  box-shadow: 8px 8px 0px 0px #00E676;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.magazine-pill {
-  border: 1.5px solid #111111;
-  box-shadow: 2px 2px 0px 0px #111111;
-}
-
-/* Custom Horizontal Scrollbar for Spreads */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+.font-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.025em;
 }
