@@ -14,22 +14,21 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-[#07090E] text-[#ECEFF4] font-sans selection:bg-[#00E676] selection:text-[#07090E]">
       
-      {/* ── HEADER JOVEM / ESTILO MAGAZINE INDEPENDENTE ── */}
+      {/* ── HEADER COM O NOVO LOGOTIPO OFICIAL ── */}
       <header className="border-b border-white/10 bg-[#07090E]/95 backdrop-blur-xl sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto px-6 h-18 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
           
-          {/* Logo Marcante */}
-          <Link href="/" className="group flex items-center gap-3">
-            <span className="w-8 h-8 rounded-lg bg-[#00E676] text-[#07090E] font-black text-base flex items-center justify-center font-display transition-transform group-hover:rotate-6">
-              #
-            </span>
-            <div className="flex flex-col">
-              <span className="font-display font-black text-xl tracking-tight text-white leading-none">
-                PARTIU<span className="text-[#00E676]">MORARSOZINHO</span>
-              </span>
-              <span className="text-[10px] font-mono tracking-widest text-white/40 uppercase mt-0.5">
-                Edição Oficial &middot; Maicon Delfino
-              </span>
+          {/* Logo Oficial com a porta aberta */}
+          <Link href="/" className="group flex items-center transition-opacity hover:opacity-90">
+            <div className="relative w-48 sm:w-56 h-12">
+              <Image
+                src="/images/logo.png"
+                alt="Partiu Morar Sozinho — Edição Oficial Maicon Delfino"
+                fill
+                priority
+                className="object-contain object-left"
+                sizes="(max-width: 640px) 192px, 224px"
+              />
             </div>
           </Link>
 
@@ -380,18 +379,28 @@ export default function HomePage() {
         </section>
       </main>
 
-      {/* ── FOOTER DISCRETO & SÓBRIO ── */}
-      <footer className="border-t border-white/10 bg-[#05070A] py-12 px-6 text-center text-xs text-white/40 space-y-4">
-        <div className="font-display font-bold text-white text-sm">
-          #PartiuMorarSozinho &middot; Por Maicon Delfino
+      {/* ── FOOTER COM O LOGOTIPO OFICIAL ── */}
+      <footer className="border-t border-white/10 bg-[#05070A] py-12 px-6 text-center text-xs text-white/40 space-y-6">
+        <div className="flex justify-center">
+          <div className="relative w-44 h-10 opacity-70 hover:opacity-100 transition-opacity">
+            <Image
+              src="/images/logo.png"
+              alt="Partiu Morar Sozinho — Edição Oficial Maicon Delfino"
+              fill
+              className="object-contain"
+              sizes="176px"
+            />
+          </div>
         </div>
+
         <div className="flex justify-center gap-6 text-white/50 font-mono text-[11px]">
           <Link href="/termos" className="hover:text-white transition-colors">Termos</Link>
           <Link href="/privacidade" className="hover:text-white transition-colors">Privacidade</Link>
           <a href="mailto:contato@partiumorarsozinho.com.br" className="hover:text-white transition-colors">Suporte</a>
         </div>
+        
         <p className="text-white/20 text-[10px]">
-          &copy; {new Date().getFullYear()} #PartiuMorarSozinho. Todos os direitos reservados.
+          &copy; {new Date().getFullYear()} #PartiuMorarSozinho &middot; Edição Oficial por Maicon Delfino. Todos os direitos reservados.
         </p>
       </footer>
 
