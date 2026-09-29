@@ -20,6 +20,16 @@ export const metadata: Metadata = {
   title: '#PartiuMorarSozinho — O Guia Prático Para Conquistar Sua Independência',
   description:
     'O plano realista para sair da casa dos seus pais sem cair na armadilha do aluguel e sem quebrar as pernas na vida adulta.',
+  icons: {
+    icon: [
+      { url: '/icon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icon.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
 };
 
 export default function RootLayout({

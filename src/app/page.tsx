@@ -64,8 +64,10 @@ export default function HomePage() {
             
             <div className="lg:col-span-7 space-y-8">
               
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#00E676]/10 border border-[#00E676]/30 text-xs font-mono font-bold text-[#00E676]">
-                <span className="w-2 h-2 rounded-full bg-[#00E676] animate-ping" />
+              <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#00E676]/10 border border-[#00E676]/30 text-xs font-mono font-bold text-[#00E676]">
+                <div className="relative w-4 h-4 shrink-0">
+                  <Image src="/images/icon-porta.png" alt="Porta" fill className="object-contain" />
+                </div>
                 O MANUAL QUE NENHUMA IMOBILIÁRIA QUER QUE VOCÊ LEIA
               </div>
 
@@ -188,8 +190,13 @@ export default function HomePage() {
                     </p>
                   </div>
 
-                  <div className="p-4 rounded-xl bg-white/[0.03] border border-[#00E676]/30 bg-[#00E676]/[0.02] space-y-2">
-                    <div className="text-[#00E676] font-mono text-xs font-bold">💡 O CAMINHO ESTRATÉGICO</div>
+                  <div className="p-4 rounded-xl bg-white/[0.03] border border-[#00E676]/40 bg-[#00E676]/[0.02] space-y-2">
+                    <div className="flex items-center justify-between">
+                      <div className="text-[#00E676] font-mono text-xs font-bold">💡 O CAMINHO ESTRATÉGICO</div>
+                      <div className="relative w-5 h-5 shrink-0">
+                        <Image src="/images/icon-porta.png" alt="Porta" fill className="object-contain" />
+                      </div>
+                    </div>
                     <p className="text-xs text-white/80 leading-relaxed">
                       O livro ensina as rotas inteligentes: quando vale dividir com meta, como negociar termos favoráveis e como sair sem virar escravo de imobiliária.
                     </p>
@@ -332,7 +339,16 @@ export default function HomePage() {
             </div>
 
             {/* Card de Aquisição Nobre */}
-            <div className="p-8 sm:p-12 rounded-3xl bg-white/[0.03] border border-white/15 space-y-7 shadow-2xl">
+            <div className="p-8 sm:p-12 rounded-3xl bg-white/[0.03] border border-white/15 space-y-7 shadow-2xl relative">
+              <div className="mx-auto w-16 h-16 relative -mt-2 drop-shadow-[0_0_24px_rgba(0,230,118,0.5)]">
+                <Image
+                  src="/images/icon-porta.png"
+                  alt="Porta para Independência"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+
               <div className="space-y-1">
                 <span className="text-xs font-mono text-white/40 uppercase tracking-widest">
                   Acesso Imediato &bull; Edição Completa
