@@ -20,14 +20,14 @@ export default function HomePage() {
           
           {/* Logo Oficial com a porta aberta */}
           <Link href="/" className="group flex items-center transition-opacity hover:opacity-90">
-            <div className="relative w-48 sm:w-56 h-12">
+            <div className="relative w-56 sm:w-72 md:w-80 h-12 sm:h-14">
               <Image
                 src="/images/logo.png"
                 alt="Partiu Morar Sozinho — Edição Oficial Maicon Delfino"
                 fill
                 priority
                 className="object-contain object-left"
-                sizes="(max-width: 640px) 192px, 224px"
+                sizes="(max-width: 640px) 224px, 320px"
               />
             </div>
           </Link>
@@ -59,7 +59,7 @@ export default function HomePage() {
 
       <main>
         {/* ── ATO 1: O CONFRONTO INICIAL (HERO) ── */}
-        <section className="relative pt-16 pb-20 md:pt-24 md:pb-32 px-6 overflow-hidden">
+        <section className="relative pt-6 pb-16 md:pt-8 md:pb-24 px-6 overflow-hidden">
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             
             <div className="lg:col-span-7 space-y-8">
@@ -398,13 +398,13 @@ export default function HomePage() {
       {/* ── FOOTER COM O LOGOTIPO OFICIAL ── */}
       <footer className="border-t border-white/10 bg-[#05070A] py-12 px-6 text-center text-xs text-white/40 space-y-6">
         <div className="flex justify-center">
-          <div className="relative w-44 h-10 opacity-70 hover:opacity-100 transition-opacity">
+          <div className="relative w-56 sm:w-64 h-11 opacity-80 hover:opacity-100 transition-opacity">
             <Image
               src="/images/logo.png"
               alt="Partiu Morar Sozinho — Edição Oficial Maicon Delfino"
               fill
               className="object-contain"
-              sizes="176px"
+              sizes="256px"
             />
           </div>
         </div>
