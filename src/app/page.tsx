@@ -28,7 +28,7 @@ export default function HomePage() {
           <Link href="/" className="group flex items-center transition-opacity hover:opacity-90">
             <div className="relative w-56 sm:w-72 md:w-80 h-12 sm:h-14">
               <Image
-                src="/images/logo.png"
+                src="/images/logo-laranja.png"
                 alt="Partiu Morar Sozinho — Edição Oficial Maicon Delfino"
                 fill
                 priority
@@ -75,7 +75,7 @@ export default function HomePage() {
               <div className="flex flex-wrap items-center gap-3">
                 <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#FF6B00]/10 border border-[#FF6B00]/30 text-xs font-semibold text-[#FF6B00] shadow-sm">
                   <div className="relative w-4 h-4 shrink-0">
-                    <Image src="/images/icon-porta.png" alt="Porta" fill className="object-contain" />
+                    <Image src="/images/icon-porta-laranja.png" alt="Porta" fill className="object-contain" />
                   </div>
                   O MANUAL QUE NENHUMA IMOBILIÁRIA OU GURU VAI TE CONTAR
                 </div>
@@ -258,7 +258,7 @@ export default function HomePage() {
                     <div className="flex items-center justify-between">
                       <div className="text-[#FF6B00] text-xs font-bold tracking-wide">💡 A ROTA DE GUERRA DO LIVRO</div>
                       <div className="relative w-5 h-5 shrink-0">
-                        <Image src="/images/icon-porta.png" alt="Porta" fill className="object-contain" />
+                        <Image src="/images/icon-porta-laranja.png" alt="Porta" fill className="object-contain" />
                       </div>
                     </div>
                     <p className="text-xs text-white/80 leading-relaxed">
@@ -504,7 +504,7 @@ export default function HomePage() {
         <div className="flex justify-center">
           <div className="relative w-56 sm:w-64 h-11 opacity-80 hover:opacity-100 transition-opacity">
             <Image
-              src="/images/logo.png"
+              src="/images/logo-laranja.png"
               alt="Partiu Morar Sozinho — Edição Oficial Maicon Delfino"
               fill
               className="object-contain"

@@ -78,7 +78,7 @@ export default function OfficialSeal({
       >
         <div className="relative w-3/4 h-3/4">
           <Image
-            src="/images/icon-porta.png"
+            src="/images/icon-porta-laranja.png"
             alt="Porta Oficial"
             fill
             className="object-contain drop-shadow-[0_0_12px_rgba(255,107,0,0.7)]"

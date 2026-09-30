@@ -16,7 +16,7 @@ export default function PrivacidadePage() {
           <Link href="/" className="group flex items-center transition-opacity hover:opacity-90">
             <div className="relative w-48 sm:w-56 h-12">
               <Image
-                src="/images/logo.png"
+                src="/images/logo-laranja.png"
                 alt="Partiu Morar Sozinho — Edição Oficial Maicon Delfino"
                 fill
                 priority
