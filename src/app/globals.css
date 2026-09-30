@@ -5,9 +5,9 @@
   --font-sans: var(--font-sans), 'Plus Jakarta Sans', system-ui, sans-serif;
   --font-display: var(--font-display), 'Space Grotesk', sans-serif;
 
-  /* Cores Principais */
-  --color-brand-green: #00E676;
-  --color-brand-green-hover: #00C864;
+  /* Cores Principais - Laranja do Livro */
+  --color-brand-orange: #FF6B00;
+  --color-brand-orange-hover: #E65C00;
   --color-brand-dark: #07090E;
   --color-brand-surface: #0E121B;
   --color-brand-surface-elevated: #151A26;
@@ -38,21 +38,17 @@ h1, h2, h3, .font-display {
   letter-spacing: -0.03em;
 }
 
-/* ── ILUMINAÇÃO NOTURNA CINEMATOGRÁFICA (ATMOSFERA ORGÂNICA) ── */
+/* ── ILUMINAÇÃO NOTURNA CINEMATOGRÁFICA (ÂMBAR / LARANJA ACOLHEDOR) ── */
 .ambient-night-sky {
   background: 
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 230, 118, 0.07), transparent 70%),
-    radial-gradient(circle 600px at 85% 25%, rgba(14, 165, 233, 0.04), transparent 60%),
-    radial-gradient(circle 500px at 15% 75%, rgba(0, 230, 118, 0.04), transparent 70%),
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(255, 107, 0, 0.08), transparent 70%),
+    radial-gradient(circle 600px at 85% 25%, rgba(255, 122, 0, 0.04), transparent 60%),
+    radial-gradient(circle 500px at 15% 75%, rgba(255, 107, 0, 0.04), transparent 70%),
     #07090E;
 }
 
 .ambient-window-glow {
-  background: radial-gradient(circle 450px at 50% 50%, rgba(0, 230, 118, 0.12), transparent 75%);
-}
-
-.ambient-window-beam {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, transparent 60%);
+  background: radial-gradient(circle 450px at 50% 50%, rgba(255, 107, 0, 0.14), transparent 75%);
 }
 
 /* ── VIDRO FUMÊ EDITORIAL (FROSTED OBSIDIAN) ── */
@@ -75,8 +71,8 @@ h1, h2, h3, .font-display {
   box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.65);
 }
 
-.glow-card-green {
-  box-shadow: 0 0 40px -8px rgba(0, 230, 118, 0.18);
+.glow-card-orange {
+  box-shadow: 0 0 45px -8px rgba(255, 107, 0, 0.22);
 }
 
 /* ── ANIMAÇÃO DE ROTAÇÃO SUAVE PARA O SELO ── */

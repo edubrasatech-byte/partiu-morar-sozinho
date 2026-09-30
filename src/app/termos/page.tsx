@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function TermosPage() {
   return (
-    <div className="min-h-screen bg-[#07090E] text-[#ECEFF4] font-sans selection:bg-[#00E676] selection:text-[#07090E] ambient-night-sky">
+    <div className="min-h-screen bg-[#07090E] text-[#ECEFF4] font-sans selection:bg-[#FF6B00] selection:text-white ambient-night-sky">
       {/* Header Simples */}
       <header className="border-b border-white/10 bg-[#07090E]/80 backdrop-blur-xl sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -36,7 +36,7 @@ export default function TermosPage() {
 
       <main className="max-w-4xl mx-auto px-6 py-16 md:py-24 space-y-12">
         <div className="space-y-4 border-b border-white/10 pb-8">
-          <span className="text-xs text-[#00E676] uppercase tracking-widest font-semibold">
+          <span className="text-xs text-[#FF6B00] uppercase tracking-widest font-semibold">
             Informações Legais
           </span>
           <h1 className="text-3xl sm:text-5xl font-display font-black text-white tracking-tight">
@@ -86,7 +86,7 @@ export default function TermosPage() {
             <h2 className="text-xl font-display font-bold text-white">5. Contato e Suporte</h2>
             <p>
               Para dúvidas, suporte de acesso ou solicitações, entre em contato através do e-mail oficial:{' '}
-              <a href="mailto:contato@partiumorarsozinho.com.br" className="text-[#00E676] hover:underline">
+              <a href="mailto:contato@partiumorarsozinho.com.br" className="text-[#FF6B00] hover:underline">
                 contato@partiumorarsozinho.com.br
               </a>.
             </p>

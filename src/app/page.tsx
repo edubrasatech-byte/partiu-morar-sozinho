@@ -13,18 +13,18 @@ const HOTMART_CHECKOUT_URL = process.env.NEXT_PUBLIC_HOTMART_URL || 'https://pay
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-[#07090E] text-[#ECEFF4] font-sans selection:bg-[#00E676] selection:text-[#07090E] relative overflow-hidden ambient-night-sky">
+    <div className="min-h-screen bg-[#07090E] text-[#ECEFF4] font-sans selection:bg-[#FF6B00] selection:text-white relative overflow-hidden ambient-night-sky">
       
-      {/* ── ILUMINAÇÃO NOTURNA CINEMATOGRÁFICA (LUZ DA CIDADE PELA JANELA) ── */}
-      <div className="fixed top-0 right-1/4 w-[700px] h-[500px] ambient-window-glow pointer-events-none z-0" />
-      <div className="fixed top-1/3 -left-48 w-[600px] h-[600px] bg-gradient-to-tr from-[#00E676]/5 via-[#0EA5E9]/5 to-transparent rounded-full blur-[140px] pointer-events-none z-0" />
-      <div className="fixed bottom-0 right-0 w-[550px] h-[450px] bg-gradient-to-tl from-[#00E676]/5 to-transparent blur-[120px] pointer-events-none z-0" />
+      {/* ── ILUMINAÇÃO NOTURNA CINEMATOGRÁFICA (LUZ DA CIDADE / ÂMBAR ACOLHEDOR) ── */}
+      <div className="fixed top-0 right-1/4 w-[750px] h-[500px] ambient-window-glow pointer-events-none z-0" />
+      <div className="fixed top-1/3 -left-48 w-[600px] h-[600px] bg-gradient-to-tr from-[#FF6B00]/6 via-[#FF8C00]/4 to-transparent rounded-full blur-[140px] pointer-events-none z-0" />
+      <div className="fixed bottom-0 right-0 w-[550px] h-[450px] bg-gradient-to-tl from-[#FF6B00]/5 to-transparent blur-[120px] pointer-events-none z-0" />
 
       {/* ── HEADER COM O LOGOTIPO OFICIAL ── */}
       <header className="border-b border-white/10 bg-[#07090E]/80 backdrop-blur-xl sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
           
-          {/* Logo Oficial com a porta aberta */}
+          {/* Logo Oficial com a porta aberta e luz laranja */}
           <Link href="/" className="group flex items-center transition-opacity hover:opacity-90">
             <div className="relative w-56 sm:w-72 md:w-80 h-12 sm:h-14">
               <Image
@@ -54,7 +54,7 @@ export default function HomePage() {
             </a>
             <a
               href="#adquirir"
-              className="text-xs font-bold uppercase tracking-wider bg-white/10 hover:bg-[#00E676] hover:text-[#07090E] text-white px-5 py-2.5 rounded-full transition-all duration-300 border border-white/15 hover:border-[#00E676] shadow-sm hover:shadow-[#00E676]/20"
+              className="text-xs font-bold uppercase tracking-wider bg-white/10 hover:bg-[#FF6B00] hover:text-[#07090E] text-white px-5 py-2.5 rounded-full transition-all duration-300 border border-white/15 hover:border-[#FF6B00] shadow-sm hover:shadow-[#FF6B00]/25"
             >
               Garantir Exemplar
             </a>
@@ -73,13 +73,13 @@ export default function HomePage() {
               
               {/* Badge Editorial Superior */}
               <div className="flex flex-wrap items-center gap-3">
-                <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#00E676]/10 border border-[#00E676]/30 text-xs font-semibold text-[#00E676] shadow-sm">
+                <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#FF6B00]/10 border border-[#FF6B00]/30 text-xs font-semibold text-[#FF6B00] shadow-sm">
                   <div className="relative w-4 h-4 shrink-0">
                     <Image src="/images/icon-porta.png" alt="Porta" fill className="object-contain" />
                   </div>
                   O MANUAL QUE NENHUMA IMOBILIÁRIA OU GURU VAI TE CONTAR
                 </div>
-                <span className="text-xs text-white/40 hidden sm:inline-block">
+                <span className="text-xs text-white/40 hidden sm:inline-block font-mono">
                   Edição Oficial 2026
                 </span>
               </div>
@@ -106,7 +106,7 @@ export default function HomePage() {
               <div className="pt-2 flex flex-col sm:flex-row items-start sm:items-center gap-4">
                 <a
                   href="#adquirir"
-                  className="w-full sm:w-auto text-center px-8 py-4 rounded-xl bg-[#00E676] hover:bg-[#00c864] text-[#07090E] font-display font-black text-sm tracking-wide transition-all shadow-xl shadow-[#00E676]/20 hover:scale-[1.02]"
+                  className="w-full sm:w-auto text-center px-8 py-4 rounded-xl bg-[#FF6B00] hover:bg-[#E65C00] text-[#07090E] font-display font-black text-sm tracking-wide transition-all shadow-xl shadow-[#FF6B00]/25 hover:scale-[1.02]"
                 >
                   Ler o Guia #PartiuMorarSozinho →
                 </a>
@@ -121,13 +121,13 @@ export default function HomePage() {
               {/* Micro-indicadores Editoriais */}
               <div className="pt-4 flex items-center gap-6 text-xs text-white/50 border-t border-white/5">
                 <span className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#00E676]" /> Sem Papo de Coach
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF6B00]" /> Sem Papo de Coach
                 </span>
                 <span className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#00E676]" /> Vida Real na Veia
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF6B00]" /> Vida Real na Veia
                 </span>
                 <span className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#00E676]" /> Acesso Imediato
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF6B00]" /> Acesso Imediato
                 </span>
               </div>
 
@@ -136,8 +136,8 @@ export default function HomePage() {
             {/* Imagem do Livro Realista com Efeito Cinematográfico */}
             <div className="lg:col-span-5 relative flex justify-center">
               
-              {/* Brilho Noturno Suave Atrás do Livro */}
-              <div className="absolute -inset-8 bg-[#00E676]/12 rounded-3xl blur-3xl pointer-events-none" />
+              {/* Brilho Noturno Âmbar Atrás do Livro */}
+              <div className="absolute -inset-8 bg-[#FF6B00]/14 rounded-3xl blur-3xl pointer-events-none" />
 
               <div className="relative w-full max-w-[420px] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl shadow-black border border-white/15 group">
                 <Image
@@ -153,13 +153,13 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
                 
                 {/* Tag Superior no Livro */}
-                <div className="absolute top-4 right-4 bg-black/75 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-[#00E676]/30 text-[11px] font-semibold text-[#00E676] tracking-wide">
+                <div className="absolute top-4 right-4 bg-black/75 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-[#FF6B00]/30 text-[11px] font-semibold text-[#FF6B00] tracking-wide">
                   Manual de Independência
                 </div>
 
                 {/* Tarja Inferior */}
                 <div className="absolute bottom-4 left-4 right-4 text-[11px] text-white/80 bg-black/80 backdrop-blur-md px-3.5 py-2.5 rounded-lg border border-white/10 flex justify-between items-center">
-                  <span className="font-bold text-[#00E676]">EDIÇÃO OFICIAL</span>
+                  <span className="font-bold text-[#FF6B00]">EDIÇÃO OFICIAL</span>
                   <span>POR MAICON DELFINO</span>
                 </div>
               </div>
@@ -254,9 +254,9 @@ export default function HomePage() {
                     </p>
                   </div>
 
-                  <div className="p-5 rounded-2xl glass-obsidian glass-obsidian-hover border-[#00E676]/40 bg-[#00E676]/[0.02] space-y-2 shadow-lg shadow-[#00E676]/5">
+                  <div className="p-5 rounded-2xl glass-obsidian glass-obsidian-hover border-[#FF6B00]/40 bg-[#FF6B00]/[0.02] space-y-2 shadow-lg shadow-[#FF6B00]/5">
                     <div className="flex items-center justify-between">
-                      <div className="text-[#00E676] text-xs font-bold tracking-wide">💡 A ROTA DE GUERRA DO LIVRO</div>
+                      <div className="text-[#FF6B00] text-xs font-bold tracking-wide">💡 A ROTA DE GUERRA DO LIVRO</div>
                       <div className="relative w-5 h-5 shrink-0">
                         <Image src="/images/icon-porta.png" alt="Porta" fill className="object-contain" />
                       </div>
@@ -273,7 +273,7 @@ export default function HomePage() {
                   <div className="text-white/60 text-center sm:text-left">
                     <span className="text-rose-400 font-bold">ALUGUEL DESPREPARADO:</span> Trocar a cobrança dos pais pela chantagem da imobiliária.
                   </div>
-                  <div className="text-[#00E676] font-bold text-center sm:text-right">
+                  <div className="text-[#FF6B00] font-bold text-center sm:text-right">
                     MÉTODO PMS: Sair pela porta da frente para nunca mais voltar.
                   </div>
                 </div>
@@ -290,7 +290,7 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto space-y-12">
             
             <div className="text-center space-y-4">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#00E676]/10 border border-[#00E676]/30 text-xs font-semibold text-[#00E676]">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FF6B00]/10 border border-[#FF6B00]/30 text-xs font-semibold text-[#FF6B00]">
                 SEM TEORIA INÚTIL &middot; SEM PAPO DE COACH
               </div>
               <h2 className="text-3xl sm:text-5xl font-display font-black text-white tracking-tight">
@@ -306,7 +306,7 @@ export default function HomePage() {
               <div className="p-8 rounded-2xl glass-obsidian glass-obsidian-hover space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-2xl">📊</span>
-                  <span className="text-xs font-semibold text-[#00E676]/80 uppercase tracking-wider">Capítulo 01</span>
+                  <span className="text-xs font-semibold text-[#FF6B00] uppercase tracking-wider">Capítulo 01</span>
                 </div>
                 <h3 className="font-display font-bold text-white text-xl">A Conta Real Que Ninguém Te Mostra</h3>
                 <p className="text-sm text-white/65 leading-relaxed">
@@ -317,7 +317,7 @@ export default function HomePage() {
               <div className="p-8 rounded-2xl glass-obsidian glass-obsidian-hover space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-2xl">🛡️</span>
-                  <span className="text-xs font-semibold text-[#00E676]/80 uppercase tracking-wider">Capítulo 02</span>
+                  <span className="text-xs font-semibold text-[#FF6B00] uppercase tracking-wider">Capítulo 02</span>
                 </div>
                 <h3 className="font-display font-bold text-white text-xl">A Armadura Antigolpe de Imóveis</h3>
                 <p className="text-sm text-white/65 leading-relaxed">
@@ -328,7 +328,7 @@ export default function HomePage() {
               <div className="p-8 rounded-2xl glass-obsidian glass-obsidian-hover space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-2xl">🍲</span>
-                  <span className="text-xs font-semibold text-[#00E676]/80 uppercase tracking-wider">Capítulo 03</span>
+                  <span className="text-xs font-semibold text-[#FF6B00] uppercase tracking-wider">Capítulo 03</span>
                 </div>
                 <h3 className="font-display font-bold text-white text-xl">Gestão Doméstica de Sobrevivência</h3>
                 <p className="text-sm text-white/65 leading-relaxed">
@@ -339,7 +339,7 @@ export default function HomePage() {
               <div className="p-8 rounded-2xl glass-obsidian glass-obsidian-hover space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-2xl">🤝</span>
-                  <span className="text-xs font-semibold text-[#00E676]/80 uppercase tracking-wider">Capítulo 04</span>
+                  <span className="text-xs font-semibold text-[#FF6B00] uppercase tracking-wider">Capítulo 04</span>
                 </div>
                 <h3 className="font-display font-bold text-white text-xl">A Conversa Definitiva com Seus Pais</h3>
                 <p className="text-sm text-white/65 leading-relaxed">
@@ -357,7 +357,7 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto space-y-12">
             
             <div className="text-center space-y-3 max-w-2xl mx-auto">
-              <span className="text-xs font-semibold uppercase tracking-widest text-[#00E676] bg-[#00E676]/10 border border-[#00E676]/20 px-4 py-1.5 rounded-full">
+              <span className="text-xs font-semibold uppercase tracking-widest text-[#FF6B00] bg-[#FF6B00]/10 border border-[#FF6B00]/20 px-4 py-1.5 rounded-full">
                 O ARSENAL COMPLETO DE FERRAMENTAS
               </span>
               <h2 className="text-3xl sm:text-5xl font-display font-black text-white tracking-tight">
@@ -383,7 +383,7 @@ export default function HomePage() {
             <div className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto pt-4 text-left">
               
               <div className="p-6 rounded-2xl glass-obsidian glass-obsidian-hover space-y-2">
-                <div className="flex items-center justify-between text-[#00E676] text-xs font-bold">
+                <div className="flex items-center justify-between text-[#FF6B00] text-xs font-bold">
                   <span>ITEM 01</span>
                   <span className="text-[11px] text-white/40">PDF / EPUB</span>
                 </div>
@@ -394,7 +394,7 @@ export default function HomePage() {
               </div>
 
               <div className="p-6 rounded-2xl glass-obsidian glass-obsidian-hover space-y-2">
-                <div className="flex items-center justify-between text-[#00E676] text-xs font-bold">
+                <div className="flex items-center justify-between text-[#FF6B00] text-xs font-bold">
                   <span>ITEM 02</span>
                   <span className="text-[11px] text-white/40">AUTOMATIZADO</span>
                 </div>
@@ -405,7 +405,7 @@ export default function HomePage() {
               </div>
 
               <div className="p-6 rounded-2xl glass-obsidian glass-obsidian-hover space-y-2">
-                <div className="flex items-center justify-between text-[#00E676] text-xs font-bold">
+                <div className="flex items-center justify-between text-[#FF6B00] text-xs font-bold">
                   <span>ITEM 03</span>
                   <span className="text-[11px] text-white/40">25 ITENS</span>
                 </div>
@@ -423,8 +423,8 @@ export default function HomePage() {
         {/* ── ATO 5: O CONVITE FINAL — DECISÃO MADURA (HOTMART) ── */}
         <section id="adquirir" className="py-24 md:py-36 border-t border-white/10 px-6 relative">
           
-          {/* Brilho Noturno Suave Central */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-[#00E676]/10 blur-[130px] pointer-events-none" />
+          {/* Brilho Noturno Âmbar Central */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-[#FF6B00]/12 blur-[130px] pointer-events-none" />
 
           <div className="max-w-2xl mx-auto text-center space-y-8 relative z-10">
             
@@ -434,7 +434,7 @@ export default function HomePage() {
             </div>
 
             <div className="space-y-4">
-              <span className="text-xs font-semibold uppercase tracking-widest text-[#00E676]">
+              <span className="text-xs font-semibold uppercase tracking-widest text-[#FF6B00]">
                 SUA INDEPENDÊNCIA COMEÇA AGORA
               </span>
               <h2 className="text-4xl sm:text-6xl font-display font-black text-white tracking-tight leading-[0.98]">
@@ -451,16 +451,16 @@ export default function HomePage() {
             </div>
 
             {/* Card de Aquisição em Vidro Fumê Obsidian */}
-            <div className="p-8 sm:p-12 rounded-3xl glass-obsidian space-y-7 shadow-2xl relative glow-card-green">
+            <div className="p-8 sm:p-12 rounded-3xl glass-obsidian space-y-7 shadow-2xl relative glow-card-orange">
               
               <div className="space-y-1">
-                <span className="text-xs text-[#00E676] uppercase tracking-widest font-bold">
+                <span className="text-xs text-[#FF6B00] uppercase tracking-widest font-bold">
                   ACESSO IMEDIATO &bull; PACOTE COMPLETO
                 </span>
                 <div className="flex items-baseline justify-center gap-3 pt-2">
                   <span className="text-white/40 text-xl line-through font-display">R$ 97</span>
                   <span className="text-5xl sm:text-6xl font-display font-black text-white">R$ 47</span>
-                  <span className="text-xs text-[#00E676] font-bold">à vista</span>
+                  <span className="text-xs text-[#FF6B00] font-bold">à vista</span>
                 </div>
                 <p className="text-xs text-white/50 pt-1">
                   Ou em até 5x no cartão de crédito pela Hotmart
@@ -472,7 +472,7 @@ export default function HomePage() {
                   href={HOTMART_CHECKOUT_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-block py-4.5 px-8 rounded-xl bg-[#00E676] hover:bg-[#00c864] text-[#07090E] font-display font-black text-base tracking-wide transition-all shadow-xl shadow-[#00E676]/25 transform hover:-translate-y-0.5 hover:scale-[1.01]"
+                  className="w-full inline-block py-4.5 px-8 rounded-xl bg-[#FF6B00] hover:bg-[#E65C00] text-[#07090E] font-display font-black text-base tracking-wide transition-all shadow-xl shadow-[#FF6B00]/30 transform hover:-translate-y-0.5 hover:scale-[1.01]"
                 >
                   Garantir Meu Exemplar na Hotmart →
                 </a>
@@ -480,13 +480,13 @@ export default function HomePage() {
 
               <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-white/70 pt-4 border-t border-white/10">
                 <span className="flex items-center gap-1.5">
-                  <span className="text-[#00E676]">✓</span> Acesso Imediato
+                  <span className="text-[#FF6B00]">✓</span> Acesso Imediato
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span className="text-[#00E676]">✓</span> 7 Dias de Garantia Total
+                  <span className="text-[#FF6B00]">✓</span> 7 Dias de Garantia Total
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span className="text-[#00E676]">✓</span> Checkout Seguro Hotmart
+                  <span className="text-[#FF6B00]">✓</span> Checkout Seguro Hotmart
                 </span>
               </div>
             </div>

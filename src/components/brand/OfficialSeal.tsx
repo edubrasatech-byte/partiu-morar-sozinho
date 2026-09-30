@@ -20,8 +20,8 @@ export default function OfficialSeal({
       className={`relative flex items-center justify-center select-none ${className}`}
       style={{ width: size, height: size }}
     >
-      {/* Halo de Brilho de Fundo */}
-      <div className="absolute inset-0 rounded-full bg-[#00E676]/10 blur-xl pointer-events-none" />
+      {/* Halo de Brilho de Fundo Âmbar/Laranja */}
+      <div className="absolute inset-0 rounded-full bg-[#FF6B00]/15 blur-xl pointer-events-none" />
 
       {/* SVG com o Texto Circular Rotativo */}
       <svg
@@ -41,7 +41,7 @@ export default function OfficialSeal({
           cy={half}
           r={half - 6}
           fill="none"
-          stroke="rgba(0, 230, 118, 0.35)"
+          stroke="rgba(255, 107, 0, 0.4)"
           strokeWidth="1"
           strokeDasharray="4 4"
         />
@@ -56,14 +56,14 @@ export default function OfficialSeal({
           strokeWidth="1"
         />
 
-        {/* Texto Curvado */}
+        {/* Texto Curvado em Laranja do Livro */}
         <text
-          fill="#00E676"
+          fill="#FF6B00"
           fontSize="8.5"
           fontFamily="monospace"
           fontWeight="bold"
           letterSpacing="2.5"
-          className="uppercase tracking-widest opacity-90"
+          className="uppercase tracking-widest opacity-95"
         >
           <textPath href="#seal-text-path" startOffset="0%">
             &bull; EDIÇÃO OFICIAL &bull; MAICON DELFINO &bull; #PARTIUMORARSOZINHO &bull; 2026 &bull;
@@ -71,9 +71,9 @@ export default function OfficialSeal({
         </text>
       </svg>
 
-      {/* Ícone da Porta Central Fixo (não gira com o texto) */}
+      {/* Ícone da Porta Central Fixo com Luz Laranja */}
       <div
-        className="absolute flex items-center justify-center rounded-full bg-[#07090E] border border-[#00E676]/40 shadow-inner"
+        className="absolute flex items-center justify-center rounded-full bg-[#07090E] border border-[#FF6B00]/50 shadow-inner"
         style={{ width: size * 0.44, height: size * 0.44 }}
       >
         <div className="relative w-3/4 h-3/4">
@@ -81,7 +81,7 @@ export default function OfficialSeal({
             src="/images/icon-porta.png"
             alt="Porta Oficial"
             fill
-            className="object-contain drop-shadow-[0_0_8px_rgba(0,230,118,0.6)]"
+            className="object-contain drop-shadow-[0_0_12px_rgba(255,107,0,0.7)]"
           />
         </div>
       </div>
