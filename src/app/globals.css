@@ -37,3 +37,43 @@ h1, h2, h3, .font-display {
   font-family: var(--font-display);
   letter-spacing: -0.03em;
 }
+
+/* ── PADRÃO TÁTICO DE GRID & BLUEPRINT ── */
+.bg-tactical-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.bg-dot-matrix {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ── ILUMINAÇÃO ATMOSFÉRICA & GLOW ── */
+.glow-spotlight-green {
+  background: radial-gradient(circle 380px at 50% 50%, rgba(0, 230, 118, 0.12), transparent 70%);
+}
+
+.glow-spotlight-hero {
+  background: radial-gradient(circle 600px at 70% 30%, rgba(0, 230, 118, 0.09), transparent 75%);
+}
+
+.glow-card-green {
+  box-shadow: 0 0 35px -5px rgba(0, 230, 118, 0.15);
+}
+
+/* ── ANIMAÇÃO DE ROTAÇÃO PARA SELO CIRCULAR ── */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 22s linear infinite;
+}
