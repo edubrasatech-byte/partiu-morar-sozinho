@@ -4,9 +4,9 @@ import Link from 'next/link';
 import OfficialSeal from '@/components/brand/OfficialSeal';
 
 export const metadata = {
-  title: '#PartiuMorarSozinho — O Plano Realista Para Sair de Casa Sem Cair na Armadilha do Aluguel',
+  title: '#PartiuMorarSozinho — Como Sair da Casa dos Seus Pais Sem Cair na Armadilha do Aluguel',
   description:
-    'O guia sem censura para conquistar sua independência de verdade, evitar o ralo financeiro do aluguel e construir a sua vida adulta sem quebrar a cara.',
+    'O manual sem censura para conquistar a sua privacidade definitiva, evitar o ralo financeiro do aluguel e construir sua vida adulta com dignidade.',
 };
 
 const HOTMART_CHECKOUT_URL = process.env.NEXT_PUBLIC_HOTMART_URL || 'https://pay.hotmart.com/YOUR_PRODUCT_CODE';
@@ -76,7 +76,7 @@ export default function HomePage() {
                   <div className="relative w-4 h-4 shrink-0">
                     <Image src="/images/icon-porta.png" alt="Porta" fill className="object-contain" />
                   </div>
-                  O MANUAL QUE NENHUMA IMOBILIÁRIA QUER QUE VOCÊ LEIA
+                  O MANUAL QUE NENHUMA IMOBILIÁRIA OU GURU VAI TE CONTAR
                 </div>
                 <span className="text-[11px] font-mono text-white/40 hidden sm:inline-block">
                   [ REF: PMS-2026 ]
@@ -88,13 +88,16 @@ export default function HomePage() {
                 Você já não cabe mais no quarto da sua infância.
               </h1>
 
-              {/* Corpo da Mensagem */}
+              {/* Corpo da Mensagem Visceral */}
               <div className="space-y-4 text-base sm:text-lg text-white/70 leading-relaxed max-w-xl font-normal">
                 <p>
-                  Chega uma idade em que morar com os pais deixa de ser apoio e passa a ser uma prisão confortável. Ter horários controlados, pedir permissão para respirar e dar satisfação da sua vida aos 20 e tantos anos está corroendo a sua maturidade.
+                  Você tem vinte e poucos anos, trabalha, ganha seu próprio dinheiro, mas ainda anda na ponta dos pés de madrugada na sua própria casa para não acordar ninguém. A porta do seu quarto abre sem bater. Você tem vergonha de levar alguém em casa porque seus pais estão na sala assistindo TV.
                 </p>
                 <p className="text-white font-medium">
-                  Só que sair no impulso e alugar o primeiro apartamento que você encontrar não é liberdade — é a forma mais rápida de falir e voltar derrotado em 6 meses.
+                  Ser um adulto com barba na cara tratado como um adolescente de 15 anos está apodrecendo a sua autoconfiança aos poucos.
+                </p>
+                <p className="text-white/80">
+                  Você quer o seu espaço para ontem. Mas sair no desespero e assinar o primeiro contrato de aluguel que encontrar não é liberdade — é a receita perfeita para falir em 90 dias e voltar com o rabo entre as pernas.
                 </p>
               </div>
 
@@ -110,17 +113,17 @@ export default function HomePage() {
                   href="#armadilha"
                   className="w-full sm:w-auto text-center px-6 py-4 rounded-xl text-xs font-mono uppercase tracking-widest text-white/60 hover:text-white transition-colors border border-white/10 hover:border-white/25 bg-white/[0.02]"
                 >
-                  Entender o risco do aluguel ↓
+                  Entender a armadilha do aluguel ↓
                 </a>
               </div>
 
               {/* Micro-indicadores Táticos */}
               <div className="pt-4 flex items-center gap-6 text-[11px] font-mono text-white/40 border-t border-white/5">
                 <span className="flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#00E676]" /> 100% Prático
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#00E676]" /> Sem Papo de Coach
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#00E676]" /> Sem Papo de Coach
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#00E676]" /> Vida Real na Veia
                 </span>
                 <span className="flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#00E676]" /> Acesso Imediato
@@ -150,7 +153,7 @@ export default function HomePage() {
                 
                 {/* Tag Tática Superior no Livro */}
                 <div className="absolute top-4 right-4 bg-black/80 backdrop-blur-md px-3 py-1 rounded-full border border-[#00E676]/40 text-[10px] font-mono text-[#00E676] font-bold tracking-wider">
-                  ● PROJETO INDEPENDÊNCIA
+                  ● MANUAL DE INDEPENDÊNCIA
                 </div>
 
                 {/* Tarja Inferior */}
@@ -168,7 +171,6 @@ export default function HomePage() {
         {/* ── ATO 2: O TAPA NA CARA — A ARMADILHA DO ALUGUEL ── */}
         <section id="armadilha" className="py-20 md:py-28 border-t border-white/10 bg-[#0A0D14]/90 px-6 relative">
           
-          {/* Marcadores de Precisão nos Cantos da Seção */}
           <div className="max-w-6xl mx-auto space-y-16">
             
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -178,7 +180,7 @@ export default function HomePage() {
                 <div className="relative w-full max-w-[440px] mx-auto aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border border-white/15">
                   <Image
                     src="/images/jovem-janela.png"
-                    alt="Jovem refletindo sobre a independência e o custo de morar sozinho"
+                    alt="Jovem refletindo sobre a armadilha do aluguel e o custo de morar sozinho"
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 440px"
@@ -187,12 +189,12 @@ export default function HomePage() {
                   
                   {/* Carimbo de Alerta Tático */}
                   <div className="absolute top-4 left-4 bg-rose-500/20 backdrop-blur-md border border-rose-500/40 text-rose-300 text-[10px] font-mono font-bold px-2.5 py-1 rounded">
-                    ⚠️ ALERTA DE RISCO
+                    ⚠️ O GOLPE DO FALSO ADULTO
                   </div>
 
                   <div className="absolute bottom-6 left-6 right-6">
                     <p className="text-sm font-medium text-white/90 italic leading-relaxed">
-                      "Alugar um apartamento sem preparo não te faz livre. Te faz refém de proprietário e escravo de boleto."
+                      "Alugar por impulso não te faz independente. Te faz refém de proprietário e escravo de boleto."
                     </p>
                   </div>
                 </div>
@@ -202,19 +204,22 @@ export default function HomePage() {
               <div className="lg:col-span-7 order-1 lg:order-2 space-y-6">
                 
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-rose-500/10 border border-rose-500/30 text-rose-400 font-mono text-xs font-bold tracking-wider">
-                  <span>☠️</span> ZONA DE PERIGO FINANCEIRO
+                  <span>☠️</span> A ILUSÃO QUE O TIKTOK NUNCA MOSTRA
                 </div>
                 
                 <h2 className="text-3xl sm:text-5xl font-display font-black text-white tracking-tight leading-tight">
-                  Alugar por impulso é a maior armadilha financeira da sua juventude.
+                  Alugar por desespero é a forma mais rápida de se endividar e voltar derrotado.
                 </h2>
 
                 <div className="space-y-4 text-sm sm:text-base text-white/70 leading-relaxed font-normal">
                   <p>
-                    Venderam para você a fantasia de que 'virar adulto' é assinar um contrato de aluguel, postar foto com a chave no feed e fazer compras no mercado no primeiro fim de semana.
+                    Venderam para você a fantasia de assinar um contrato, pegar a chave na imobiliária, abrir uma cerveja na sala vazia e postar <em>'nova fase'</em> no feed. Ninguém filma o que acontece 60 dias depois: o kitnet com infiltração oculta, o chuveiro que desarma o disjuntor na primeira semana e uma montanha de custos invisíveis que você nem sabia que existiam.
                   </p>
                   <p>
-                    O que não te contaram é que o aluguel tradicional é um <strong className="text-white">ralo financeiro sem fim</strong> projetado para sugar entre 40% a 60% de tudo o que você ganha todo santo mês, sem nunca te dar um tijolo de volta.
+                    Para entrar, você queima todas as suas economias: 3 meses de caução trancados, taxa de vistoria, cartório, carreto e um cartão de crédito estourado comprando desde botijão de gás até vassoura e escorredor de prato.
+                  </p>
+                  <p>
+                    Quando a primeira fatura chega, a ficha cai: você trocou dar satisfação para seus pais por ser extorquido por uma imobiliária. E no 4º mês, comendo miojo, tem que engolir o orgulho e pedir um PIX escondido pro seu pai para pagar o condomínio.
                   </p>
                 </div>
 
@@ -223,21 +228,21 @@ export default function HomePage() {
                   
                   <div className="p-4.5 rounded-xl bg-white/[0.02] border border-rose-500/20 space-y-2 relative group hover:border-rose-500/40 transition-colors">
                     <div className="flex items-center justify-between text-rose-400 font-mono text-xs font-bold">
-                      <span>☠️ O RALO DO DINHEIRO</span>
+                      <span>☠️ O RALO SEM FUNDO</span>
                       <span className="text-[10px] opacity-60">+</span>
                     </div>
                     <p className="text-xs text-white/60 leading-relaxed">
-                      Aluguel, condomínio, IPTU e taxas ocultas somam o dobro do valor anunciado. Seu dinheiro evapora e você fica sem reserva nenhuma para emergências.
+                      Você achava que o aluguel era R$ 1.400. Com condomínio, IPTU fantasma, taxa de lixo, seguro-fiança, luz e internet, vira R$ 2.600 todo dia 10. Em 12 meses, você queima mais de R$ 30.000 sem ter um único parafuso como patrimônio.
                     </p>
                   </div>
 
                   <div className="p-4.5 rounded-xl bg-white/[0.02] border border-rose-500/20 space-y-2 relative group hover:border-rose-500/40 transition-colors">
                     <div className="flex items-center justify-between text-rose-400 font-mono text-xs font-bold">
-                      <span>🔒 AS ALGEMAS CONTRATUAIS</span>
+                      <span>🔒 AS ALGEMAS DO CONTRATO</span>
                       <span className="text-[10px] opacity-60">+</span>
                     </div>
                     <p className="text-xs text-white/60 leading-relaxed">
-                      Caução de 3 meses trancado, fiador constrangedor, reajustes abusivos e multas rescisórias impagáveis caso você queira mudar de planos.
+                      Contrato de 30 meses com multa rescisória violenta. Se você perder o emprego ou seu roommate surtar, você não pode simplesmente sair. Seu nome vai pro Serasa ou você destrói a relação com o parente que foi seu fiador.
                     </p>
                   </div>
 
@@ -247,19 +252,19 @@ export default function HomePage() {
                       <span className="text-[10px] opacity-60">+</span>
                     </div>
                     <p className="text-xs text-white/60 leading-relaxed">
-                      Você troca dar satisfação para seus pais por ser vigiado por imobiliária, síndico implicante e vistorias punitivas para te cobrar reparos absurdos.
+                      Achou que não ia dar satisfação para ninguém? Agora tem síndico implicando com o volume da sua TV, vizinho colado na sua parede e vistorias punitivas para inventar defeitos e confiscar o seu caução na saída.
                     </p>
                   </div>
 
                   <div className="p-4.5 rounded-xl bg-[#00E676]/[0.03] border border-[#00E676]/40 space-y-2 relative shadow-lg shadow-[#00E676]/5">
                     <div className="flex items-center justify-between">
-                      <div className="text-[#00E676] font-mono text-xs font-bold">💡 O CAMINHO ESTRATÉGICO</div>
+                      <div className="text-[#00E676] font-mono text-xs font-bold">💡 A ROTA DE GUERRA DO LIVRO</div>
                       <div className="relative w-5 h-5 shrink-0">
                         <Image src="/images/icon-porta.png" alt="Porta" fill className="object-contain" />
                       </div>
                     </div>
                     <p className="text-xs text-white/80 leading-relaxed">
-                      O livro ensina as rotas inteligentes: quando vale dividir com meta, como negociar termos favoráveis e como sair sem virar escravo de imobiliária.
+                      O livro não te manda alugar no impulso. Ele te ensina a rota cirúrgica: como acumular a reserva blindada, calcular o custo real de montagem, negociar cláusulas com proprietários e sair apenas quando a sua estrutura for inabalável.
                     </p>
                   </div>
 
@@ -268,10 +273,10 @@ export default function HomePage() {
                 {/* Banner Tático de Comparação Numérica */}
                 <div className="p-4 rounded-xl bg-black/60 border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono">
                   <div className="text-white/60 text-center sm:text-left">
-                    <span className="text-rose-400 font-bold">ALUGUEL DESPREPARADO:</span> ~R$ 30.000/ano queimados sem retorno.
+                    <span className="text-rose-400 font-bold">ALUGUEL DESPREPARADO:</span> Trocar a cobrança dos pais pela chantagem da imobiliária.
                   </div>
                   <div className="text-[#00E676] font-bold text-center sm:text-right">
-                    MÉTODO PMS: Independência com patrimônio protegido.
+                    MÉTODO PMS: Sair pela porta da frente para nunca mais voltar.
                   </div>
                 </div>
 
@@ -291,10 +296,10 @@ export default function HomePage() {
                 <span>[ MANUAL OPERACIONAL ]</span> SEM TEORIA INÚTIL &middot; SEM PAPO DE COACH
               </div>
               <h2 className="text-3xl sm:text-5xl font-display font-black text-white tracking-tight">
-                Um manual de combate para a vida real.
+                Não é autoajuda. É a planta baixa da vida adulta real.
               </h2>
-              <p className="text-base text-white/60 max-w-2xl mx-auto">
-                Não é sobre 'mentalidade milionária' nem conselhos furados da internet. É o passo a passo cru de quem já errou, já quebrou a cabeça e mapeou as regras do jogo para você não passar vergonha.
+              <p className="text-base text-white/60 max-w-2xl mx-auto leading-relaxed">
+                Aqui não tem ninguém mandando você 'acordar às 5h da manhã' nem prometendo milagre financeiro. É o passo a passo cru de quem já errou, já passou aperto e mapeou as regras do jogo para você não passar vergonha.
               </p>
             </div>
 
@@ -305,9 +310,9 @@ export default function HomePage() {
                   <span className="text-2xl">📊</span>
                   <span className="text-[10px] font-mono text-white/30 uppercase">[ CAPÍTULO 01 ]</span>
                 </div>
-                <h3 className="font-display font-bold text-white text-xl">A Conta Real Que Ninguém Mostra</h3>
+                <h3 className="font-display font-bold text-white text-xl">A Conta Real Que Ninguém Te Mostra</h3>
                 <p className="text-sm text-white/60 leading-relaxed">
-                  Quanto você realmente precisa na conta antes do dia 1. Como separar custo de instalação (fogão, cama, internet) do seu custo fixo de sobrevivência.
+                  Quanto de dinheiro líquido você precisa ter no banco antes de dar o primeiro passo. A separação cirúrgica entre custo de montagem (geladeira, fogão, colchão, botijão de gás) e o custo de manutenção diária para não passar aperto.
                 </p>
               </div>
 
@@ -316,9 +321,9 @@ export default function HomePage() {
                   <span className="text-2xl">🛡️</span>
                   <span className="text-[10px] font-mono text-white/30 uppercase">[ CAPÍTULO 02 ]</span>
                 </div>
-                <h3 className="font-display font-bold text-white text-xl">Roteiro Antigolpe de Imóvel</h3>
+                <h3 className="font-display font-bold text-white text-xl">A Armadura Antigolpe de Imóveis</h3>
                 <p className="text-sm text-white/60 leading-relaxed">
-                  Como avaliar um contrato de locação sem ser feito de trouxa. O checklist de 25 itens para inspecionar infiltrações, fiação e evitar cobranças indevidas na saída.
+                  Os 25 pontos cegos que toda imobiliária tenta mascarar com tinta fresca na vistoria de entrada para te cobrar uma fortuna na saída. Como auditar fiação antiga, infiltração sob piso, pressão de água e minutas de contrato abusivas.
                 </p>
               </div>
 
@@ -329,7 +334,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="font-display font-bold text-white text-xl">Gestão Doméstica de Sobrevivência</h3>
                 <p className="text-sm text-white/60 leading-relaxed">
-                  Como manter a casa limpa, roupa lavada e comida saudável na geladeira trabalhando o dia todo fora, sem gastar metade do salário com iFood.
+                  Como manter roupas limpas, comida de verdade na geladeira e casa habitável trabalhando o dia todo fora, sem deixar o apartamento virar um lixão e sem queimar metade do seu salário pedindo delivery no desespero.
                 </p>
               </div>
 
@@ -338,9 +343,9 @@ export default function HomePage() {
                   <span className="text-2xl">🤝</span>
                   <span className="text-[10px] font-mono text-white/30 uppercase">[ CAPÍTULO 04 ]</span>
                 </div>
-                <h3 className="font-display font-bold text-white text-xl">A Conversa de Saída com Seus Pais</h3>
+                <h3 className="font-display font-bold text-white text-xl">A Conversa Definitiva com Seus Pais</h3>
                 <p className="text-sm text-white/60 leading-relaxed">
-                  Como anunciar sua saída com maturidade e respeito, cortando o cordão umbilical sem criar inimizades e deixando as portas da família sempre abertas.
+                  Como anunciar a sua saída com maturidade e respeito, cortando o cordão umbilical sem criar inimizade na família. Como sair como um homem feito ou mulher independente, e não como um adolescente rebelde batendo a porta.
                 </p>
               </div>
 
@@ -358,10 +363,10 @@ export default function HomePage() {
                 O ARSENAL COMPLETO DE FERRAMENTAS
               </span>
               <h2 className="text-3xl sm:text-5xl font-display font-black text-white tracking-tight">
-                Você recebe as armas práticas para executar.
+                Você recebe as armas práticas para executar hoje.
               </h2>
               <p className="text-sm sm:text-base text-white/60">
-                Ler teoria não paga boleto. Por isso você recebe o e-book acompanhado dos instrumentos operacionais para planejar sua saída do zero.
+                Ler teoria não paga condomínio. Por isso você não recebe só um e-book: você recebe os mesmos instrumentos operacionais para planejar a sua saída no centavo.
               </p>
             </div>
 
@@ -386,7 +391,7 @@ export default function HomePage() {
                 </div>
                 <h4 className="text-white font-display font-bold text-lg">O Livro Digital Oficial</h4>
                 <p className="text-xs text-white/60 leading-relaxed">
-                  Leitura direta e aplicável para celular, Kindle, tablet e computador.
+                  Leitura direta, sem firula e 100% aplicável para celular, Kindle, tablet e computador.
                 </p>
               </div>
 
@@ -395,9 +400,9 @@ export default function HomePage() {
                   <span>[ ARMA 02 ]</span>
                   <span className="text-[10px] text-white/40">SIMULADOR AUTOMATIZADO</span>
                 </div>
-                <h4 className="text-white font-display font-bold text-lg">Planilha de Custo Real</h4>
+                <h4 className="text-white font-display font-bold text-lg">Planilha de Custo Real de Vida</h4>
                 <p className="text-xs text-white/60 leading-relaxed">
-                  Simulador automatizado para calcular se você tem capital para sair agora ou quanto precisa guardar.
+                  Simulador inteligente para calcular se você tem capital para sair agora ou exatamente quanto precisa guardar antes do dia 1.
                 </p>
               </div>
 
@@ -406,9 +411,9 @@ export default function HomePage() {
                   <span>[ ARMA 03 ]</span>
                   <span className="text-[10px] text-white/40">25 ITENS ANTIFRAUDE</span>
                 </div>
-                <h4 className="text-white font-display font-bold text-lg">Checklist de Vistoria</h4>
+                <h4 className="text-white font-display font-bold text-lg">Checklist de Vistoria Presencial</h4>
                 <p className="text-xs text-white/60 leading-relaxed">
-                  Folha prática de conferência para levar nas visitas aos imóveis e desarmar armadilhas de imobiliárias.
+                  Folha prática de conferência para levar nas visitas aos imóveis e desarmar armadilhas de imobiliárias e proprietários folgados.
                 </p>
               </div>
 
@@ -437,9 +442,14 @@ export default function HomePage() {
               <h2 className="text-4xl sm:text-6xl font-display font-black text-white tracking-tight leading-[0.98]">
                 A chave da sua porta começa na sua atitude.
               </h2>
-              <p className="text-base sm:text-lg text-white/70 leading-relaxed">
-                Você pode passar mais um ano reclamando da falta de espaço e da rotina dos seus pais. Ou pode investir menos do que uma pizza de sábado para aprender a construir a sua liberdade definitiva com segurança.
-              </p>
+              <div className="space-y-3 text-base sm:text-lg text-white/70 leading-relaxed max-w-xl mx-auto">
+                <p>
+                  Você pode passar mais um ano reclamando da falta de privacidade, engolindo sapo no almoço de domingo e esperando magicamente ter 30 anos para começar a sua própria vida.
+                </p>
+                <p className="text-white font-medium">
+                  Ou pode investir menos do que gasta numa pizza de sexta-feira para aprender a construir a sua liberdade definitiva com segurança matemática.
+                </p>
+              </div>
             </div>
 
             {/* Card de Aquisição Nobre com Cantos Táticos */}
@@ -490,7 +500,7 @@ export default function HomePage() {
             </div>
 
             <p className="text-xs text-white/40 max-w-md mx-auto leading-relaxed">
-              Garantia incondicional de 7 dias: se por qualquer razão você achar que o guia não te preparou para a vida real, a Hotmart devolve 100% do seu valor com um clique. O risco é zero.
+              Garantia incondicional de 7 dias: leia o material, abra as planilhas. Se por qualquer razão você achar que o guia não te preparou para a vida adulta de verdade, a Hotmart devolve 100% do seu valor com um clique. O risco é zero.
             </p>
 
           </div>
